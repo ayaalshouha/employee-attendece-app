@@ -24,6 +24,9 @@ namespace Employees_Attendence_System
             //Application.Run(new FrmCheckInOut());
             //Application.Run(new FrmAdminLogin());
             //Application.Run(new FrmLeaveRequest());
+
+
+            //test//test//test//test//test//test//test//test//test
         }
     }
 }
