@@ -1,0 +1,21 @@
+C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\bin\Debug\Employees Attendence System.exe.config
+C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\bin\Debug\Employees Attendence System.exe
+C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\bin\Debug\Employees Attendence System.pdb
+C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\obj\Debug\Employees Attendence System.csproj.AssemblyReference.cache
+C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\obj\Debug\Employees_Attendence_System.Properties.Resources.resources
+C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\obj\Debug\Employees Attendence System.csproj.GenerateResource.cache
+C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\obj\Debug\Employees Attendence System.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\obj\Debug\Employees Attendence System.exe
+C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\obj\Debug\Employees Attendence System.pdb
+C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\bin\Debug\EAS_Buissness.dll
+C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\bin\Debug\EAS.dll
+C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\bin\Debug\EAS_Buissness.pdb
+C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\bin\Debug\EAS.pdb
+C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\obj\Debug\Employees Attendence System.csproj.CopyComplete
+C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\obj\Debug\Employees_Attendence_System.FrmStart.resources
+C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\obj\Debug\Employees_Attendence_System.Attendences.FrmCheckInOut.resources
+C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\obj\Debug\Employees_Attendence_System.Adminstration.FrmMainAdminScreen.resources
+C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\obj\Debug\Employees_Attendence_System.Adminstration.FrmAdminLogin.resources
+C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\obj\Debug\Employees_Attendence_System.Leave_Request.FrmLeaveRequest.resources
+C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\obj\Debug\Employees_Attendence_System.Leave_Request.FrmAddNewRequst.resources
+C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\obj\Debug\Employees_Attendence_System.Leave_Request.FrmFollowupExistingRequest.resources

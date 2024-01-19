@@ -1,0 +1,6 @@
+C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\EAS\bin\Debug\EAS.dll
+C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\EAS\bin\Debug\EAS.pdb
+C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\EAS\obj\Debug\EAS_Data.csproj.AssemblyReference.cache
+C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\EAS\obj\Debug\EAS_Data.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\EAS\obj\Debug\EAS.dll
+C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\EAS\obj\Debug\EAS.pdb
