@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-# Employees-Attendence-System
+# Employees-Attendence-Application
 a .NET Desktop Application that structured with a Three-tier Architecture, seamlessly integrated with a Microsoft SQL Server Database. It utilizes the capabilities of .NET Windows Form technology , written in C# programming language and follows the principles of Object-Oriented Programming (OOP).
 
 ## Overview
@@ -65,7 +64,3 @@ cd Employees-Attendence-System
 
 - **For Visual Studio**:
      - Run the compiled application from within the Visual Studio Community IDE.
-=======
-# employee-attendece-app
-.NET application
->>>>>>> 657f98bcb4442597b6a5f1a2ce8a553df7d8f993
