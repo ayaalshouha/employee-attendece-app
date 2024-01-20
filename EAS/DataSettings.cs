@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Common;
 using System.Data.SqlClient;
 using System.Diagnostics;
+using System.Configuration; 
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -79,7 +80,9 @@ namespace EAS_Data
     }
     public class DataSettings
     {
-        public static string ConnectionString = "server=.; database=AttendenceEmployeesSystem; user id=sa; password=sa123456;";
+        public static string ConnectionString = ConfigurationManager.AppSettings["connectionString"]; 
+
+           //"server=.; database=AttendenceEmployeesSystem; user id=sa; password=sa123456;";
         public static void StoreUsingEventLogs(string message)
         {
             string sourceName = "AttendenceApp";
