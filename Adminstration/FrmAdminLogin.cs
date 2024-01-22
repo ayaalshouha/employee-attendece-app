@@ -25,6 +25,8 @@ namespace Employees_Attendence_System.Adminstration
                 return;
             }
 
+            //string HashedPassword = clsGlobal.ComputeHash(txtPassword.Text);
+           
             _User = clsUser.Find(txtUsername.Text.Trim(), txtPassword.Text.Trim());
 
             if(_User == null)
@@ -73,12 +75,12 @@ namespace Employees_Attendence_System.Adminstration
         private void FrmAdminLogin_Load(object sender, EventArgs e)
         {
             txtUsername.Focus();
+            txtPassword.PasswordChar = '*';
             string username = "", password = "";
-
             if (clsGlobal.getUsernamePasswordUsingRegistry(ref username, ref password))
             {
                 txtUsername.Text = username;
-                txtPassword.Text = password;
+                txtPassword.Text = new string('*', password.Length); ;
                 chbRememberME.Checked = true;
             }
             else

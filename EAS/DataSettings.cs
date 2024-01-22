@@ -80,7 +80,7 @@ namespace EAS_Data
     }
     public class DataSettings
     {
-        public static string ConnectionString = ConfigurationManager.AppSettings["connectionString"]; 
+        public static string ConnectionString = ConfigurationManager.AppSettings["ConnectionString"]; 
 
            //"server=.; database=AttendenceEmployeesSystem; user id=sa; password=sa123456;";
         public static void StoreUsingEventLogs(string message)
