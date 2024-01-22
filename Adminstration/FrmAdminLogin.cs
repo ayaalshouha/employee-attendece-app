@@ -12,10 +12,8 @@ namespace Employees_Attendence_System.Adminstration
         public FrmAdminLogin()
         {
             InitializeComponent();
+            txtPassword.PasswordChar = '*';
         }
-        // comment
-        //comment
-        //comment
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtPassword.Text) || string.IsNullOrEmpty(txtUsername.Text))
@@ -75,12 +73,12 @@ namespace Employees_Attendence_System.Adminstration
         private void FrmAdminLogin_Load(object sender, EventArgs e)
         {
             txtUsername.Focus();
-            txtPassword.PasswordChar = '*';
             string username = "", password = "";
+
             if (clsGlobal.getUsernamePasswordUsingRegistry(ref username, ref password))
             {
                 txtUsername.Text = username;
-                txtPassword.Text = new string('*', password.Length); ;
+                txtPassword.Text = password;
                 chbRememberME.Checked = true;
             }
             else

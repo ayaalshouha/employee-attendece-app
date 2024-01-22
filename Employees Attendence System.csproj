@@ -65,6 +65,12 @@
     <Compile Include="Attendences\FrmCheckInOut.Designer.cs">
       <DependentUpon>FrmCheckInOut.cs</DependentUpon>
     </Compile>
+    <Compile Include="Employees\FrmFindEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees\FrmFindEmployee.Designer.cs">
+      <DependentUpon>FrmFindEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmStart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Attendences\FrmCheckInOut.resx">
       <DependentUpon>FrmCheckInOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees\FrmFindEmployee.resx">
+      <DependentUpon>FrmFindEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmStart.resx">
       <DependentUpon>FrmStart.cs</DependentUpon>
@@ -294,6 +303,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\status_away.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2bd3939309781.560cc3db6e529.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

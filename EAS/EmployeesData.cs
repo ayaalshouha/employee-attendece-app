@@ -32,9 +32,8 @@ namespace EAS_Data
                     employee.EmployeeDepartmentID = (int)Reader["EmployeeDepartmentID"];
                     employee.WorkedFrom = (DateTime)Reader["WorkedFrom"];
 
-
                     if(Reader["WorkedTo"] == DBNull.Value)
-                        employee.WorkedTo = DateTime.MinValue;
+                        employee.WorkedTo = null;
                     else
                         employee.WorkedTo = (DateTime)Reader["WorkedTo"];
                 }

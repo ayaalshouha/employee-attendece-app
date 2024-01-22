@@ -73,6 +73,16 @@ namespace Employees_Attendence_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2bd3939309781_560cc3db6e529 {
+            get {
+                object obj = ResourceManager.GetObject("2bd3939309781.560cc3db6e529", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _4d6d6149403675_58b42136c6332 {
             get {
                 object obj = ResourceManager.GetObject("4d6d6149403675.58b42136c6332", resourceCulture);

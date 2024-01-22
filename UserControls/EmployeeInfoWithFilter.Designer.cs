@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.gbFilter = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.btnFind = new System.Windows.Forms.Button();
+            this.txtInput = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,13 +51,11 @@
             this.lblPhonenumber = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.gbInformation = new System.Windows.Forms.GroupBox();
-            this.lblEditInfo = new System.Windows.Forms.LinkLabel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.btnFind = new System.Windows.Forms.Button();
-            this.txtInput = new System.Windows.Forms.TextBox();
+            this.lblNotes = new System.Windows.Forms.Label();
             this.lblLeavingDate = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblEditInfo = new System.Windows.Forms.LinkLabel();
             this.gbFilter.SuspendLayout();
             this.gbInformation.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -62,15 +63,48 @@
             // 
             // gbFilter
             // 
+            this.gbFilter.BackColor = System.Drawing.Color.Transparent;
             this.gbFilter.Controls.Add(this.label10);
             this.gbFilter.Controls.Add(this.btnFind);
             this.gbFilter.Controls.Add(this.txtInput);
             this.gbFilter.Location = new System.Drawing.Point(13, 12);
             this.gbFilter.Name = "gbFilter";
-            this.gbFilter.Size = new System.Drawing.Size(733, 100);
+            this.gbFilter.Size = new System.Drawing.Size(822, 83);
             this.gbFilter.TabIndex = 0;
             this.gbFilter.TabStop = false;
             this.gbFilter.Text = "Filter";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(17, 40);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(129, 20);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "Employee\'s ID:";
+            // 
+            // btnFind
+            // 
+            this.btnFind.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFind.FlatAppearance.BorderSize = 0;
+            this.btnFind.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnFind.Image = global::Employees_Attendence_System.Properties.Resources.search__1_;
+            this.btnFind.Location = new System.Drawing.Point(394, 30);
+            this.btnFind.Name = "btnFind";
+            this.btnFind.Size = new System.Drawing.Size(57, 40);
+            this.btnFind.TabIndex = 9;
+            this.btnFind.UseVisualStyleBackColor = true;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
+            // 
+            // txtInput
+            // 
+            this.txtInput.Location = new System.Drawing.Point(159, 36);
+            this.txtInput.Multiline = true;
+            this.txtInput.Name = "txtInput";
+            this.txtInput.Size = new System.Drawing.Size(223, 28);
+            this.txtInput.TabIndex = 8;
+            this.txtInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInput_KeyPress);
             // 
             // label1
             // 
@@ -136,7 +170,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(15, 64);
+            this.label7.Location = new System.Drawing.Point(11, 64);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(117, 20);
             this.label7.TabIndex = 25;
@@ -146,7 +180,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(52, 96);
+            this.label8.Location = new System.Drawing.Point(54, 96);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(74, 20);
             this.label8.TabIndex = 26;
@@ -156,11 +190,11 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(56, 128);
+            this.label9.Location = new System.Drawing.Point(30, 128);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(76, 20);
+            this.label9.Size = new System.Drawing.Size(98, 20);
             this.label9.TabIndex = 27;
-            this.label9.Text = "Country:";
+            this.label9.Text = "Nationality:";
             // 
             // lblName
             // 
@@ -247,6 +281,8 @@
             // 
             // gbInformation
             // 
+            this.gbInformation.BackColor = System.Drawing.Color.Transparent;
+            this.gbInformation.Controls.Add(this.lblNotes);
             this.gbInformation.Controls.Add(this.lblLeavingDate);
             this.gbInformation.Controls.Add(this.label12);
             this.gbInformation.Controls.Add(this.groupBox1);
@@ -261,70 +297,24 @@
             this.gbInformation.Controls.Add(this.label3);
             this.gbInformation.Controls.Add(this.label2);
             this.gbInformation.Controls.Add(this.label1);
-            this.gbInformation.Location = new System.Drawing.Point(13, 118);
+            this.gbInformation.Location = new System.Drawing.Point(13, 101);
             this.gbInformation.Name = "gbInformation";
-            this.gbInformation.Size = new System.Drawing.Size(733, 284);
+            this.gbInformation.Size = new System.Drawing.Size(822, 284);
             this.gbInformation.TabIndex = 1;
             this.gbInformation.TabStop = false;
             this.gbInformation.Text = "Employee\'s Info";
             // 
-            // lblEditInfo
+            // lblNotes
             // 
-            this.lblEditInfo.AutoSize = true;
-            this.lblEditInfo.Enabled = false;
-            this.lblEditInfo.Location = new System.Drawing.Point(559, 22);
-            this.lblEditInfo.Name = "lblEditInfo";
-            this.lblEditInfo.Size = new System.Drawing.Size(154, 20);
-            this.lblEditInfo.TabIndex = 39;
-            this.lblEditInfo.TabStop = true;
-            this.lblEditInfo.Text = "Edit Employee\'s Info";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.lblPhonenumber);
-            this.groupBox1.Controls.Add(this.lblCountry);
-            this.groupBox1.Controls.Add(this.lblBirthdate);
-            this.groupBox1.Controls.Add(this.lblGender);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Location = new System.Drawing.Point(416, 101);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(289, 164);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Personal info";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(17, 40);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(129, 20);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "Employee\'s ID:";
-            // 
-            // btnFind
-            // 
-            this.btnFind.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFind.FlatAppearance.BorderSize = 0;
-            this.btnFind.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnFind.Image = global::Employees_Attendence_System.Properties.Resources.search__1_;
-            this.btnFind.Location = new System.Drawing.Point(381, 25);
-            this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(57, 40);
-            this.btnFind.TabIndex = 9;
-            this.btnFind.UseVisualStyleBackColor = true;
-            // 
-            // txtInput
-            // 
-            this.txtInput.Location = new System.Drawing.Point(152, 37);
-            this.txtInput.Multiline = true;
-            this.txtInput.Name = "txtInput";
-            this.txtInput.Size = new System.Drawing.Size(223, 28);
-            this.txtInput.TabIndex = 8;
+            this.lblNotes.AutoSize = true;
+            this.lblNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNotes.ForeColor = System.Drawing.Color.Red;
+            this.lblNotes.Location = new System.Drawing.Point(571, 13);
+            this.lblNotes.Name = "lblNotes";
+            this.lblNotes.Size = new System.Drawing.Size(67, 20);
+            this.lblNotes.TabIndex = 42;
+            this.lblNotes.Text = "NOTES:";
+            this.lblNotes.Visible = false;
             // 
             // lblLeavingDate
             // 
@@ -345,6 +335,36 @@
             this.label12.TabIndex = 40;
             this.label12.Text = "Leaving Date:";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.lblPhonenumber);
+            this.groupBox1.Controls.Add(this.lblCountry);
+            this.groupBox1.Controls.Add(this.lblBirthdate);
+            this.groupBox1.Controls.Add(this.lblGender);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Location = new System.Drawing.Point(416, 101);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(363, 164);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Personal info";
+            // 
+            // lblEditInfo
+            // 
+            this.lblEditInfo.AutoSize = true;
+            this.lblEditInfo.Enabled = false;
+            this.lblEditInfo.Location = new System.Drawing.Point(650, 22);
+            this.lblEditInfo.Name = "lblEditInfo";
+            this.lblEditInfo.Size = new System.Drawing.Size(154, 20);
+            this.lblEditInfo.TabIndex = 39;
+            this.lblEditInfo.TabStop = true;
+            this.lblEditInfo.Text = "Edit Employee\'s Info";
+            this.lblEditInfo.Visible = false;
+            this.lblEditInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblEditInfo_LinkClicked);
+            // 
             // EmployeeInfoWithFilter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -353,7 +373,8 @@
             this.Controls.Add(this.gbInformation);
             this.Controls.Add(this.gbFilter);
             this.Name = "EmployeeInfoWithFilter";
-            this.Size = new System.Drawing.Size(759, 409);
+            this.Size = new System.Drawing.Size(844, 394);
+            this.Load += new System.EventHandler(this.EmployeeInfoWithFilter_Load);
             this.gbFilter.ResumeLayout(false);
             this.gbFilter.PerformLayout();
             this.gbInformation.ResumeLayout(false);
@@ -393,5 +414,6 @@
         private System.Windows.Forms.TextBox txtInput;
         private System.Windows.Forms.Label lblLeavingDate;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblNotes;
     }
 }

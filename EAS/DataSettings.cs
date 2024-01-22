@@ -31,7 +31,7 @@ namespace EAS_Data
         public int PersonID { get; set; }
         public int EmployeeDepartmentID { get; set; }
         public DateTime WorkedFrom { get; set; }
-        public DateTime WorkedTo { get; set; }
+        public DateTime? WorkedTo { get; set; }
     }
     public struct stUser
     {

@@ -15,7 +15,12 @@ namespace EAS_Buissness
         public int EmployeeDepartmentID { get; set; }
         public clsDepartment DepartmentInfo { get; set; }
         public DateTime WorkedFrom { get; set; }
-        public DateTime WorkedTo { get; set; }
+        public DateTime? WorkedTo { get; set; }
+
+        public bool isStillWorking
+        {
+            get { return (this.WorkedTo == null);  }
+        }
 
         public clsEmployee()
         {
@@ -24,7 +29,7 @@ namespace EAS_Buissness
             this.PersonInfo = null;
             this.EmployeeDepartmentID = -1;
             this.WorkedFrom = DateTime.MinValue;
-            this.WorkedTo = DateTime.MinValue;
+            this.WorkedTo = null;
 
             _Mode = enMode.AddNew;
         }

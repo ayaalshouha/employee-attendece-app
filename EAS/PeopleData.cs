@@ -30,9 +30,10 @@ namespace EAS_Data
                     person.ID = (int)Reader["ID"];
                     person.FirstName = (string)Reader["FirstName"];
                     person.SecondName = (string)Reader["SecondName"];
-                    person.ThirdName = (string)Reader["ThirdName"];
+                    person.ThirdName = Reader["ThirdName"] == DBNull.Value ? string.Empty : (string)Reader["ThirdName"];
                     person.LastName = (string)Reader["LastName"];
                     person.Email = (string)Reader["Email"];
+                    person.PhoneNumber = (string)Reader["PhoneNumber"];
                     person.Address = (string)Reader["Address"];
                     person.Nationality = (string)Reader["Nationality"];
                     person.BirthDate = (DateTime)Reader["BirthDate"];

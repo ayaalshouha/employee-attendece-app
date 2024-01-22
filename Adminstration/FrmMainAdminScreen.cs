@@ -1,4 +1,6 @@
-﻿using Employees_Attendence_System.Global;
+﻿using Employees_Attendence_System.Employees;
+using Employees_Attendence_System.Global;
+using Employees_Attendence_System.Leave_Request;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,6 +31,20 @@ namespace Employees_Attendence_System.Adminstration
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void employeeDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //FrmFindEmployee Form = new FrmFindEmployee(); 
+            //Form.ShowDialog();
+
+            pnlMainScreen.Controls.Clear();
+            lblSubHeader.Text = "Employee Details"; 
+            FrmFindEmployee Form = new FrmFindEmployee();
+            Form.TopLevel = false;
+            Form.Dock = DockStyle.Fill;
+            pnlMainScreen.Controls.Add(Form);
+            Form.Show();
         }
     }
 }
