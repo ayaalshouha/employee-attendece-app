@@ -42,6 +42,13 @@ namespace Employees_Attendence_System.Leave_Request
         private void btnSearch_Click(object sender, EventArgs e)
         {
 
+            if (string.IsNullOrEmpty(txtID.Text))
+            {
+                txtNOTES.Visible = true;
+                txtNOTES.Text = $"\tEnter ID First!!";
+                return;
+            }
+
             if (int.TryParse(txtID.Text, out int id))
             {
                 EmployeeID = id;
