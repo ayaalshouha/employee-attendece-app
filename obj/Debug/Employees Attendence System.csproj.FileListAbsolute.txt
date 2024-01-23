@@ -21,3 +21,6 @@ C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\obj\Deb
 C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\obj\Debug\Employees_Attendence_System.Leave_Request.FrmFollowupExistingRequest.resources
 C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\obj\Debug\Employees_Attendence_System.UserControls.EmployeeInfoWithFilter.resources
 C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\obj\Debug\Employees_Attendence_System.Employees.FrmFindEmployee.resources
+C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\obj\Debug\Employees_Attendence_System.UserControls.UserInformationWithFilter.resources
+C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\obj\Debug\Employees_Attendence_System.Users.FrmUpdateUsername.resources
+C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\obj\Debug\Employees_Attendence_System.Users.FrmUserInformation.resources

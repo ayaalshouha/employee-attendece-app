@@ -1,6 +1,7 @@
 ﻿using Employees_Attendence_System.Employees;
 using Employees_Attendence_System.Global;
 using Employees_Attendence_System.Leave_Request;
+using Employees_Attendence_System.Users;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -41,6 +42,17 @@ namespace Employees_Attendence_System.Adminstration
             pnlMainScreen.Controls.Clear();
             lblSubHeader.Text = "Employee Details"; 
             FrmFindEmployee Form = new FrmFindEmployee();
+            Form.TopLevel = false;
+            Form.Dock = DockStyle.Fill;
+            pnlMainScreen.Controls.Add(Form);
+            Form.Show();
+        }
+
+        private void userInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pnlMainScreen.Controls.Clear();
+            lblSubHeader.Text = "Current user info";
+            FrmUserInformation Form = new FrmUserInformation(clsGlobal.CurrentUser.ID);
             Form.TopLevel = false;
             Form.Dock = DockStyle.Fill;
             pnlMainScreen.Controls.Add(Form);

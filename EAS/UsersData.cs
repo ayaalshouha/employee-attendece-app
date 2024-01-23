@@ -215,6 +215,31 @@ namespace EAS_Data
             return isFound;
         }
 
+        public static bool isExist(string username)
+        {
+            bool isFound = false;
+            SqlConnection Connection = new SqlConnection(DataSettings.ConnectionString);
+            try
+            {
+                string Query = "SELECT ID FROM Users WHERE username = @username;";
+                SqlCommand command = new SqlCommand(Query, Connection);
+                command.Parameters.AddWithValue("@username", username);
+                Connection.Open();
+                object result = command.ExecuteScalar();
+                isFound = (result != null);
+            }
+            catch (Exception ex)
+            {
+                DataSettings.StoreUsingEventLogs(ex.Message.ToString());
+            }
+            finally
+            {
+                Connection.Close();
+            }
+            return isFound;
+        }
+
+
         public static DataTable List()
         {
             DataTable dt = new DataTable();
@@ -243,6 +268,33 @@ namespace EAS_Data
             return dt;
         }
 
+        public static bool UpdateUsername(int UserID, string NewUsername)
+        {
+            int RowAffected = -1;
+            SqlConnection Connection = new SqlConnection(DataSettings.ConnectionString);
+            try
+            {
+                string Query = @"UPDATE Users 
+                        SET username = @NewUsername WHERE ID = @UserID;";
+                SqlCommand command = new SqlCommand(Query, Connection);
+
+                command.Parameters.AddWithValue("@UserID", UserID);
+                command.Parameters.AddWithValue("@NewUsername", NewUsername);
+
+                Connection.Open();
+                RowAffected = command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                DataSettings.StoreUsingEventLogs(ex.Message.ToString());
+            }
+            finally
+            {
+                Connection.Close();
+            }
+            return RowAffected > 0;
+
+        }
         public static bool Deactivate(int UserID)
         {
             bool deactivated = false;

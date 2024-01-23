@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.lblSubHeader = new System.Windows.Forms.Label();
             this.DateNow = new System.Windows.Forms.Label();
             this.lblWelcoming = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -58,7 +59,6 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlMainScreen = new System.Windows.Forms.Panel();
-            this.lblSubHeader = new System.Windows.Forms.Label();
             this.pnlHeader.SuspendLayout();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -76,6 +76,17 @@
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(1004, 85);
             this.pnlHeader.TabIndex = 1;
+            // 
+            // lblSubHeader
+            // 
+            this.lblSubHeader.AutoSize = true;
+            this.lblSubHeader.Font = new System.Drawing.Font("Sakkal Majalla", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubHeader.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblSubHeader.Location = new System.Drawing.Point(462, 55);
+            this.lblSubHeader.Name = "lblSubHeader";
+            this.lblSubHeader.Size = new System.Drawing.Size(80, 25);
+            this.lblSubHeader.TabIndex = 24;
+            this.lblSubHeader.Text = "SubHeader";
             // 
             // DateNow
             // 
@@ -321,6 +332,7 @@
             this.userInformationToolStripMenuItem.Name = "userInformationToolStripMenuItem";
             this.userInformationToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.userInformationToolStripMenuItem.Text = "User information";
+            this.userInformationToolStripMenuItem.Click += new System.EventHandler(this.userInformationToolStripMenuItem_Click);
             // 
             // changePasswordToolStripMenuItem
             // 
@@ -347,17 +359,6 @@
             this.pnlMainScreen.Name = "pnlMainScreen";
             this.pnlMainScreen.Size = new System.Drawing.Size(894, 624);
             this.pnlMainScreen.TabIndex = 10;
-            // 
-            // lblSubHeader
-            // 
-            this.lblSubHeader.AutoSize = true;
-            this.lblSubHeader.Font = new System.Drawing.Font("Sakkal Majalla", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubHeader.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblSubHeader.Location = new System.Drawing.Point(462, 55);
-            this.lblSubHeader.Name = "lblSubHeader";
-            this.lblSubHeader.Size = new System.Drawing.Size(80, 25);
-            this.lblSubHeader.TabIndex = 24;
-            this.lblSubHeader.Text = "SubHeader";
             // 
             // FrmMainAdminScreen
             // 

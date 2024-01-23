@@ -36,7 +36,7 @@ namespace EAS_Buissness
         {
             this.ID = user.ID;
             this.EmployeeID = user.EmployeeID;
-            //this.EmployeeInfo = clsEmployee.Fine(this.EmployeeID);
+            this.EmployeeInfo = clsEmployee.Find(this.EmployeeID);
             this.username = user.username;
             this.password = user.password;
             this.permissions = user.permissions;
@@ -111,6 +111,10 @@ namespace EAS_Buissness
             return false;
         }
 
+        public bool ChangeUsername(string new_username)
+        {
+            return UsersData.UpdateUsername(this.ID, new_username); 
+        }
         public bool Delete()
         {
             return UsersData.Delete(this.ID);
@@ -119,6 +123,11 @@ namespace EAS_Buissness
         public static bool isExist(int ID)
         {
             return UsersData.isExist(ID);
+        }
+
+        public static bool isExist(string username)
+        {
+            return UsersData.isExist(username);
         }
 
         public static DataTable UserseList()

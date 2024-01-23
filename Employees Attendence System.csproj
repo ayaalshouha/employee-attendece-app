@@ -104,6 +104,24 @@
     <Compile Include="UserControls\EmployeeInfoWithFilter.Designer.cs">
       <DependentUpon>EmployeeInfoWithFilter.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserInformationWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserInformationWithFilter.Designer.cs">
+      <DependentUpon>UserInformationWithFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\FrmUpdateUsername.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\FrmUpdateUsername.Designer.cs">
+      <DependentUpon>FrmUpdateUsername.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\FrmUserInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\FrmUserInformation.Designer.cs">
+      <DependentUpon>FrmUserInformation.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Adminstration\FrmAdminLogin.resx">
       <DependentUpon>FrmAdminLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,6 +158,15 @@
     </Compile>
     <EmbeddedResource Include="UserControls\EmployeeInfoWithFilter.resx">
       <DependentUpon>EmployeeInfoWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserInformationWithFilter.resx">
+      <DependentUpon>UserInformationWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\FrmUpdateUsername.resx">
+      <DependentUpon>FrmUpdateUsername.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\FrmUserInformation.resx">
+      <DependentUpon>FrmUserInformation.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
