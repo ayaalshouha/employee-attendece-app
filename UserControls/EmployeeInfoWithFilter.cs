@@ -14,6 +14,28 @@ namespace Employees_Attendence_System.UserControls
 {
     public partial class EmployeeInfoWithFilter : UserControl
     {
+        public class EmployeeSelectedEventArgs : EventArgs
+        {
+            public clsEmployee SelectedEmployee { get; }
+
+            public EmployeeSelectedEventArgs(clsEmployee employee)
+            {
+                this.SelectedEmployee = employee;
+            }
+        }
+
+        //declare event handler 
+        public event EventHandler<EmployeeSelectedEventArgs> onEmployeeSelected;
+
+        public void RaiseOnLicenseSelected(clsEmployee employee)
+        {
+            RaiseOnLicenseSelected(new EmployeeSelectedEventArgs(employee));
+        }
+        protected virtual void RaiseOnLicenseSelected(EmployeeSelectedEventArgs e)
+        {
+            onEmployeeSelected?.Invoke(this, e);
+        }
+
         private clsEmployee Employee;
         private int? _EmployeeID = null;
         private bool _FilterEnabled = true;
@@ -96,7 +118,14 @@ namespace Employees_Attendence_System.UserControls
             Employee = clsEmployee.Find(_EmployeeID.Value);
 
             if (Employee != null)
+            {
                 LoadEmployeeInfo(Employee);
+
+                if (onEmployeeSelected != null)
+                {
+                    RaiseOnLicenseSelected(Employee);
+                }
+            }
             else
             {
                 Clear();
@@ -128,7 +157,15 @@ namespace Employees_Attendence_System.UserControls
             Employee = clsEmployee.Find(_EmployeeID.Value);
 
             if (Employee != null)
+            {
                 LoadEmployeeInfo(Employee);
+
+                if (onEmployeeSelected != null)
+                {
+                    RaiseOnLicenseSelected(Employee);
+                }
+
+            }
             else
             {
                 Clear();
