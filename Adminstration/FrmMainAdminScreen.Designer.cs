@@ -59,6 +59,11 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlMainScreen = new System.Windows.Forms.Panel();
+            this.employeesListToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.attendencesReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.overtimeReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlHeader.SuspendLayout();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -342,6 +347,12 @@
             // 
             // helpToolStripMenuItem
             // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.employeesListToolStripMenuItem1,
+            this.toolStripMenuItem4,
+            this.toolStripSeparator1,
+            this.attendencesReportToolStripMenuItem,
+            this.overtimeReportToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(89, 29);
             this.helpToolStripMenuItem.Text = "Reports";
@@ -359,6 +370,35 @@
             this.pnlMainScreen.Name = "pnlMainScreen";
             this.pnlMainScreen.Size = new System.Drawing.Size(894, 624);
             this.pnlMainScreen.TabIndex = 10;
+            // 
+            // employeesListToolStripMenuItem1
+            // 
+            this.employeesListToolStripMenuItem1.Name = "employeesListToolStripMenuItem1";
+            this.employeesListToolStripMenuItem1.Size = new System.Drawing.Size(348, 34);
+            this.employeesListToolStripMenuItem1.Text = "Employees List";
+            // 
+            // attendencesReportToolStripMenuItem
+            // 
+            this.attendencesReportToolStripMenuItem.Name = "attendencesReportToolStripMenuItem";
+            this.attendencesReportToolStripMenuItem.Size = new System.Drawing.Size(348, 34);
+            this.attendencesReportToolStripMenuItem.Text = "Attendences Report";
+            // 
+            // overtimeReportToolStripMenuItem
+            // 
+            this.overtimeReportToolStripMenuItem.Name = "overtimeReportToolStripMenuItem";
+            this.overtimeReportToolStripMenuItem.Size = new System.Drawing.Size(348, 34);
+            this.overtimeReportToolStripMenuItem.Text = "Overtime Report";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(345, 6);
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(348, 34);
+            this.toolStripMenuItem4.Text = "Employee Leave Requests List";
             // 
             // FrmMainAdminScreen
             // 
@@ -417,5 +457,10 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
         private System.Windows.Forms.Panel pnlMainScreen;
         private System.Windows.Forms.Label lblSubHeader;
+        private System.Windows.Forms.ToolStripMenuItem employeesListToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem attendencesReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem overtimeReportToolStripMenuItem;
     }
 }
