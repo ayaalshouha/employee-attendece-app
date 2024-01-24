@@ -61,5 +61,12 @@ namespace Employees_Attendence_System.Adminstration
             FrmChangePassword form = new FrmChangePassword(clsGlobal.CurrentUser.ID); 
             form.ShowDialog();
         }
+
+        private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clsGlobal.CurrentUser = null;
+            _Login.Show();
+            this.Close();
+        }
     }
 }
