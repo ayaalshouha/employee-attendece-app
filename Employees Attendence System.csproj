@@ -352,5 +352,26 @@
   <ItemGroup>
     <None Include="Resources\password %282%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\overtime_rate %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\project_stats.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\project_acceptance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accept_document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personal_photo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\couple %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\time_cycles %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

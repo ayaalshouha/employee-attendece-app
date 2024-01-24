@@ -103,6 +103,16 @@ namespace Employees_Attendence_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap accept_document {
+            get {
+                object obj = ResourceManager.GetObject("accept_document", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add__1_ {
             get {
                 object obj = ResourceManager.GetObject("add (1)", resourceCulture);
@@ -273,6 +283,16 @@ namespace Employees_Attendence_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap couple__1_ {
+            get {
+                object obj = ResourceManager.GetObject("couple (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap customer {
             get {
                 object obj = ResourceManager.GetObject("customer", resourceCulture);
@@ -383,6 +403,16 @@ namespace Employees_Attendence_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap overtime_rate__1_ {
+            get {
+                object obj = ResourceManager.GetObject("overtime_rate (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap password {
             get {
                 object obj = ResourceManager.GetObject("password", resourceCulture);
@@ -406,6 +436,36 @@ namespace Employees_Attendence_System.Properties {
         internal static System.Drawing.Bitmap password__2_ {
             get {
                 object obj = ResourceManager.GetObject("password (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap personal_photo {
+            get {
+                object obj = ResourceManager.GetObject("personal_photo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap project_acceptance {
+            get {
+                object obj = ResourceManager.GetObject("project_acceptance", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap project_stats {
+            get {
+                object obj = ResourceManager.GetObject("project_stats", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -516,6 +576,16 @@ namespace Employees_Attendence_System.Properties {
         internal static System.Drawing.Bitmap status_away {
             get {
                 object obj = ResourceManager.GetObject("status_away", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap time_cycles__1_ {
+            get {
+                object obj = ResourceManager.GetObject("time_cycles (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

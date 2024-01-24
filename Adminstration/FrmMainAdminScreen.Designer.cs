@@ -38,21 +38,12 @@
             this.filesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.companyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.employeeOvertimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.attendenceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.attendenceListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
-            this.leaveManagmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.approvedLeavesListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.currentUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.attendencesReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.overtimeReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlMainScreen = new System.Windows.Forms.Panel();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripSeparator();
@@ -62,10 +53,19 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.employeeDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.employeeOvertimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employeesListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.attendenceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.attendenceListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.leaveManagmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.approvedLeavesListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employeesListToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.attendencesReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.overtimeReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlHeader.SuspendLayout();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -79,7 +79,7 @@
             this.pnlHeader.Controls.Add(this.lblWelcoming);
             this.pnlHeader.Controls.Add(this.label1);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHeader.Location = new System.Drawing.Point(0, 33);
+            this.pnlHeader.Location = new System.Drawing.Point(0, 36);
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(1004, 85);
             this.pnlHeader.TabIndex = 1;
@@ -137,9 +137,9 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnNew);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 118);
+            this.panel1.Location = new System.Drawing.Point(0, 121);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(110, 624);
+            this.panel1.Size = new System.Drawing.Size(110, 621);
             this.panel1.TabIndex = 8;
             // 
             // menuStrip1
@@ -155,7 +155,7 @@
             this.helpToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1004, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1004, 36);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -188,45 +188,15 @@
             this.employeesToolStripMenuItem.Size = new System.Drawing.Size(114, 30);
             this.employeesToolStripMenuItem.Text = "Employees";
             // 
-            // employeeOvertimeToolStripMenuItem
-            // 
-            this.employeeOvertimeToolStripMenuItem.Name = "employeeOvertimeToolStripMenuItem";
-            this.employeeOvertimeToolStripMenuItem.Size = new System.Drawing.Size(344, 34);
-            this.employeeOvertimeToolStripMenuItem.Text = "Employee Overtime";
-            // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(341, 6);
             // 
-            // attendenceToolStripMenuItem
-            // 
-            this.attendenceToolStripMenuItem.Name = "attendenceToolStripMenuItem";
-            this.attendenceToolStripMenuItem.Size = new System.Drawing.Size(344, 34);
-            this.attendenceToolStripMenuItem.Text = "Attendence";
-            // 
-            // attendenceListToolStripMenuItem
-            // 
-            this.attendenceListToolStripMenuItem.Name = "attendenceListToolStripMenuItem";
-            this.attendenceListToolStripMenuItem.Size = new System.Drawing.Size(344, 34);
-            this.attendenceListToolStripMenuItem.Text = "Attendences List";
-            // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(341, 6);
-            // 
-            // leaveManagmentToolStripMenuItem
-            // 
-            this.leaveManagmentToolStripMenuItem.Name = "leaveManagmentToolStripMenuItem";
-            this.leaveManagmentToolStripMenuItem.Size = new System.Drawing.Size(344, 34);
-            this.leaveManagmentToolStripMenuItem.Text = "Leave Requests Management";
-            // 
-            // approvedLeavesListToolStripMenuItem
-            // 
-            this.approvedLeavesListToolStripMenuItem.Name = "approvedLeavesListToolStripMenuItem";
-            this.approvedLeavesListToolStripMenuItem.Size = new System.Drawing.Size(344, 34);
-            this.approvedLeavesListToolStripMenuItem.Text = "Approved Requests List";
             // 
             // toolStripMenuItem3
             // 
@@ -241,16 +211,8 @@
             this.toolStripMenuItem5,
             this.signOutToolStripMenuItem});
             this.currentUserToolStripMenuItem.Name = "currentUserToolStripMenuItem";
-            this.currentUserToolStripMenuItem.Size = new System.Drawing.Size(126, 29);
+            this.currentUserToolStripMenuItem.Size = new System.Drawing.Size(126, 30);
             this.currentUserToolStripMenuItem.Text = "Current User";
-            // 
-            // changePasswordToolStripMenuItem
-            // 
-            this.changePasswordToolStripMenuItem.Image = global::Employees_Attendence_System.Properties.Resources.password__2_;
-            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.changePasswordToolStripMenuItem.Text = "Change password";
-            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -264,31 +226,10 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(89, 30);
             this.helpToolStripMenuItem.Text = "Reports";
             // 
-            // toolStripMenuItem4
-            // 
-            this.toolStripMenuItem4.Image = global::Employees_Attendence_System.Properties.Resources.clipboard;
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(348, 34);
-            this.toolStripMenuItem4.Text = "Employee Leave Requests List";
-            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(345, 6);
-            // 
-            // attendencesReportToolStripMenuItem
-            // 
-            this.attendencesReportToolStripMenuItem.Image = global::Employees_Attendence_System.Properties.Resources.clipboard;
-            this.attendencesReportToolStripMenuItem.Name = "attendencesReportToolStripMenuItem";
-            this.attendencesReportToolStripMenuItem.Size = new System.Drawing.Size(348, 34);
-            this.attendencesReportToolStripMenuItem.Text = "Attendences Report";
-            // 
-            // overtimeReportToolStripMenuItem
-            // 
-            this.overtimeReportToolStripMenuItem.Image = global::Employees_Attendence_System.Properties.Resources.clipboard;
-            this.overtimeReportToolStripMenuItem.Name = "overtimeReportToolStripMenuItem";
-            this.overtimeReportToolStripMenuItem.Size = new System.Drawing.Size(348, 34);
-            this.overtimeReportToolStripMenuItem.Text = "Overtime Report";
             // 
             // helpToolStripMenuItem1
             // 
@@ -299,9 +240,9 @@
             // pnlMainScreen
             // 
             this.pnlMainScreen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMainScreen.Location = new System.Drawing.Point(110, 118);
+            this.pnlMainScreen.Location = new System.Drawing.Point(110, 121);
             this.pnlMainScreen.Name = "pnlMainScreen";
-            this.pnlMainScreen.Size = new System.Drawing.Size(894, 624);
+            this.pnlMainScreen.Size = new System.Drawing.Size(894, 621);
             this.pnlMainScreen.TabIndex = 10;
             // 
             // toolStripMenuItem5
@@ -390,18 +331,53 @@
             // 
             // employeeDetailsToolStripMenuItem
             // 
-            this.employeeDetailsToolStripMenuItem.Image = global::Employees_Attendence_System.Properties.Resources.user__3_1;
+            this.employeeDetailsToolStripMenuItem.Image = global::Employees_Attendence_System.Properties.Resources.personal_photo;
             this.employeeDetailsToolStripMenuItem.Name = "employeeDetailsToolStripMenuItem";
             this.employeeDetailsToolStripMenuItem.Size = new System.Drawing.Size(344, 34);
             this.employeeDetailsToolStripMenuItem.Text = "Employee Details";
             this.employeeDetailsToolStripMenuItem.Click += new System.EventHandler(this.employeeDetailsToolStripMenuItem_Click);
             // 
+            // employeeOvertimeToolStripMenuItem
+            // 
+            this.employeeOvertimeToolStripMenuItem.Image = global::Employees_Attendence_System.Properties.Resources.overtime_rate__1_;
+            this.employeeOvertimeToolStripMenuItem.Name = "employeeOvertimeToolStripMenuItem";
+            this.employeeOvertimeToolStripMenuItem.Size = new System.Drawing.Size(344, 34);
+            this.employeeOvertimeToolStripMenuItem.Text = "Employee Overtime";
+            // 
             // employeesListToolStripMenuItem
             // 
-            this.employeesListToolStripMenuItem.Image = global::Employees_Attendence_System.Properties.Resources.couple;
+            this.employeesListToolStripMenuItem.Image = global::Employees_Attendence_System.Properties.Resources.couple__1_;
             this.employeesListToolStripMenuItem.Name = "employeesListToolStripMenuItem";
             this.employeesListToolStripMenuItem.Size = new System.Drawing.Size(344, 34);
             this.employeesListToolStripMenuItem.Text = "Employees List";
+            // 
+            // attendenceToolStripMenuItem
+            // 
+            this.attendenceToolStripMenuItem.Image = global::Employees_Attendence_System.Properties.Resources.project_acceptance;
+            this.attendenceToolStripMenuItem.Name = "attendenceToolStripMenuItem";
+            this.attendenceToolStripMenuItem.Size = new System.Drawing.Size(344, 34);
+            this.attendenceToolStripMenuItem.Text = "Attendence";
+            // 
+            // attendenceListToolStripMenuItem
+            // 
+            this.attendenceListToolStripMenuItem.Image = global::Employees_Attendence_System.Properties.Resources.project_stats;
+            this.attendenceListToolStripMenuItem.Name = "attendenceListToolStripMenuItem";
+            this.attendenceListToolStripMenuItem.Size = new System.Drawing.Size(344, 34);
+            this.attendenceListToolStripMenuItem.Text = "Attendences List";
+            // 
+            // leaveManagmentToolStripMenuItem
+            // 
+            this.leaveManagmentToolStripMenuItem.Image = global::Employees_Attendence_System.Properties.Resources.time_cycles__1_;
+            this.leaveManagmentToolStripMenuItem.Name = "leaveManagmentToolStripMenuItem";
+            this.leaveManagmentToolStripMenuItem.Size = new System.Drawing.Size(344, 34);
+            this.leaveManagmentToolStripMenuItem.Text = "Leave Requests Management";
+            // 
+            // approvedLeavesListToolStripMenuItem
+            // 
+            this.approvedLeavesListToolStripMenuItem.Image = global::Employees_Attendence_System.Properties.Resources.accept_document;
+            this.approvedLeavesListToolStripMenuItem.Name = "approvedLeavesListToolStripMenuItem";
+            this.approvedLeavesListToolStripMenuItem.Size = new System.Drawing.Size(344, 34);
+            this.approvedLeavesListToolStripMenuItem.Text = "Approved Requests List";
             // 
             // userInformationToolStripMenuItem
             // 
@@ -410,6 +386,14 @@
             this.userInformationToolStripMenuItem.Size = new System.Drawing.Size(256, 34);
             this.userInformationToolStripMenuItem.Text = "User information";
             this.userInformationToolStripMenuItem.Click += new System.EventHandler(this.userInformationToolStripMenuItem_Click);
+            // 
+            // changePasswordToolStripMenuItem
+            // 
+            this.changePasswordToolStripMenuItem.Image = global::Employees_Attendence_System.Properties.Resources.password__2_;
+            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(256, 34);
+            this.changePasswordToolStripMenuItem.Text = "Change password";
+            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
             // signOutToolStripMenuItem
             // 
@@ -425,6 +409,27 @@
             this.employeesListToolStripMenuItem1.Name = "employeesListToolStripMenuItem1";
             this.employeesListToolStripMenuItem1.Size = new System.Drawing.Size(348, 34);
             this.employeesListToolStripMenuItem1.Text = "Employees List";
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Image = global::Employees_Attendence_System.Properties.Resources.clipboard;
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(348, 34);
+            this.toolStripMenuItem4.Text = "Employee Leave Requests List";
+            // 
+            // attendencesReportToolStripMenuItem
+            // 
+            this.attendencesReportToolStripMenuItem.Image = global::Employees_Attendence_System.Properties.Resources.clipboard;
+            this.attendencesReportToolStripMenuItem.Name = "attendencesReportToolStripMenuItem";
+            this.attendencesReportToolStripMenuItem.Size = new System.Drawing.Size(348, 34);
+            this.attendencesReportToolStripMenuItem.Text = "Attendences Report";
+            // 
+            // overtimeReportToolStripMenuItem
+            // 
+            this.overtimeReportToolStripMenuItem.Image = global::Employees_Attendence_System.Properties.Resources.clipboard;
+            this.overtimeReportToolStripMenuItem.Name = "overtimeReportToolStripMenuItem";
+            this.overtimeReportToolStripMenuItem.Size = new System.Drawing.Size(348, 34);
+            this.overtimeReportToolStripMenuItem.Text = "Overtime Report";
             // 
             // FrmMainAdminScreen
             // 
