@@ -56,5 +56,10 @@ namespace Employees_Attendence_System.Users
             else
                 this.Close();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

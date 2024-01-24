@@ -50,13 +50,16 @@ namespace Employees_Attendence_System.Adminstration
 
         private void userInformationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pnlMainScreen.Controls.Clear();
-            lblSubHeader.Text = "Current user info";
+            lblSubHeader.Text = "Sub-Header";
             FrmUserInformation Form = new FrmUserInformation(clsGlobal.CurrentUser.ID);
-            Form.TopLevel = false;
-            Form.Dock = DockStyle.Fill;
-            pnlMainScreen.Controls.Add(Form);
-            Form.Show();
+            Form.ShowDialog();
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lblSubHeader.Text = "Sub-Header";
+            FrmChangePassword form = new FrmChangePassword(clsGlobal.CurrentUser.ID); 
+            form.ShowDialog();
         }
     }
 }

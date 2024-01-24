@@ -23,9 +23,9 @@ namespace Employees_Attendence_System.Adminstration
                 return;
             }
 
-            //string HashedPassword = clsGlobal.ComputeHash(txtPassword.Text);
+            string HashedPassword = clsGlobal.ComputeHash(txtPassword.Text);
            
-            _User = clsUser.Find(txtUsername.Text.Trim(), txtPassword.Text.Trim());
+            _User = clsUser.Find(txtUsername.Text.Trim(), HashedPassword);
 
             if(_User == null)
             {

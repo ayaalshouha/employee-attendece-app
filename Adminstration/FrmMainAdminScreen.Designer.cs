@@ -57,13 +57,13 @@
             this.userInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnlMainScreen = new System.Windows.Forms.Panel();
             this.employeesListToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.attendencesReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.overtimeReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnlMainScreen = new System.Windows.Forms.Panel();
             this.pnlHeader.SuspendLayout();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -344,6 +344,7 @@
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
             this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.changePasswordToolStripMenuItem.Text = "Change password";
+            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -356,6 +357,35 @@
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(89, 29);
             this.helpToolStripMenuItem.Text = "Reports";
+            // 
+            // employeesListToolStripMenuItem1
+            // 
+            this.employeesListToolStripMenuItem1.Name = "employeesListToolStripMenuItem1";
+            this.employeesListToolStripMenuItem1.Size = new System.Drawing.Size(348, 34);
+            this.employeesListToolStripMenuItem1.Text = "Employees List";
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(348, 34);
+            this.toolStripMenuItem4.Text = "Employee Leave Requests List";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(345, 6);
+            // 
+            // attendencesReportToolStripMenuItem
+            // 
+            this.attendencesReportToolStripMenuItem.Name = "attendencesReportToolStripMenuItem";
+            this.attendencesReportToolStripMenuItem.Size = new System.Drawing.Size(348, 34);
+            this.attendencesReportToolStripMenuItem.Text = "Attendences Report";
+            // 
+            // overtimeReportToolStripMenuItem
+            // 
+            this.overtimeReportToolStripMenuItem.Name = "overtimeReportToolStripMenuItem";
+            this.overtimeReportToolStripMenuItem.Size = new System.Drawing.Size(348, 34);
+            this.overtimeReportToolStripMenuItem.Text = "Overtime Report";
             // 
             // helpToolStripMenuItem1
             // 
@@ -370,35 +400,6 @@
             this.pnlMainScreen.Name = "pnlMainScreen";
             this.pnlMainScreen.Size = new System.Drawing.Size(894, 624);
             this.pnlMainScreen.TabIndex = 10;
-            // 
-            // employeesListToolStripMenuItem1
-            // 
-            this.employeesListToolStripMenuItem1.Name = "employeesListToolStripMenuItem1";
-            this.employeesListToolStripMenuItem1.Size = new System.Drawing.Size(348, 34);
-            this.employeesListToolStripMenuItem1.Text = "Employees List";
-            // 
-            // attendencesReportToolStripMenuItem
-            // 
-            this.attendencesReportToolStripMenuItem.Name = "attendencesReportToolStripMenuItem";
-            this.attendencesReportToolStripMenuItem.Size = new System.Drawing.Size(348, 34);
-            this.attendencesReportToolStripMenuItem.Text = "Attendences Report";
-            // 
-            // overtimeReportToolStripMenuItem
-            // 
-            this.overtimeReportToolStripMenuItem.Name = "overtimeReportToolStripMenuItem";
-            this.overtimeReportToolStripMenuItem.Size = new System.Drawing.Size(348, 34);
-            this.overtimeReportToolStripMenuItem.Text = "Overtime Report";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(345, 6);
-            // 
-            // toolStripMenuItem4
-            // 
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(348, 34);
-            this.toolStripMenuItem4.Text = "Employee Leave Requests List";
             // 
             // FrmMainAdminScreen
             // 

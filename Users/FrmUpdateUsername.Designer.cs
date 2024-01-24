@@ -33,8 +33,9 @@
             this.txtNewUsername = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.lblnotes = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -42,6 +43,7 @@
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.MidnightBlue;
+            this.pnlHeader.Controls.Add(this.btnClose);
             this.pnlHeader.Controls.Add(this.label1);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
@@ -90,6 +92,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Update";
             // 
+            // lblnotes
+            // 
+            this.lblnotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnotes.ForeColor = System.Drawing.Color.Red;
+            this.lblnotes.Location = new System.Drawing.Point(18, 99);
+            this.lblnotes.Name = "lblnotes";
+            this.lblnotes.Size = new System.Drawing.Size(424, 42);
+            this.lblnotes.TabIndex = 6;
+            this.lblnotes.Text = "NOTES:";
+            this.lblnotes.Visible = false;
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
@@ -103,22 +116,27 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // lblnotes
+            // btnClose
             // 
-            this.lblnotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnotes.ForeColor = System.Drawing.Color.Red;
-            this.lblnotes.Location = new System.Drawing.Point(18, 99);
-            this.lblnotes.Name = "lblnotes";
-            this.lblnotes.Size = new System.Drawing.Size(424, 42);
-            this.lblnotes.TabIndex = 6;
-            this.lblnotes.Text = "NOTES:";
-            this.lblnotes.Visible = false;
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnClose.Image = global::Employees_Attendence_System.Properties.Resources.arrow_left1;
+            this.btnClose.Location = new System.Drawing.Point(0, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(65, 67);
+            this.btnClose.TabIndex = 22;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // FrmUpdateUsername
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(477, 228);
             this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.groupBox1);
@@ -143,5 +161,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblnotes;
+        private System.Windows.Forms.Button btnClose;
     }
 }

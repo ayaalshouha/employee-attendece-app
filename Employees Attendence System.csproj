@@ -110,6 +110,12 @@
     <Compile Include="UserControls\UserInformationWithFilter.Designer.cs">
       <DependentUpon>UserInformationWithFilter.cs</DependentUpon>
     </Compile>
+    <Compile Include="Users\FrmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\FrmChangePassword.Designer.cs">
+      <DependentUpon>FrmChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Users\FrmUpdateUsername.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserInformationWithFilter.resx">
       <DependentUpon>UserInformationWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\FrmChangePassword.resx">
+      <DependentUpon>FrmChangePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\FrmUpdateUsername.resx">
       <DependentUpon>FrmUpdateUsername.cs</DependentUpon>
