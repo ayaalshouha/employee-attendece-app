@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.chbRememberME = new System.Windows.Forms.CheckBox();
             this.txtNotes = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -44,7 +45,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.chbRememberME = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,6 +68,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(394, 363);
             this.panel1.TabIndex = 0;
+            // 
+            // chbRememberME
+            // 
+            this.chbRememberME.AutoSize = true;
+            this.chbRememberME.Location = new System.Drawing.Point(18, 215);
+            this.chbRememberME.Name = "chbRememberME";
+            this.chbRememberME.Size = new System.Drawing.Size(149, 24);
+            this.chbRememberME.TabIndex = 12;
+            this.chbRememberME.Text = "Remember Me?";
+            this.chbRememberME.UseVisualStyleBackColor = true;
             // 
             // txtNotes
             // 
@@ -202,18 +212,9 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // chbRememberME
-            // 
-            this.chbRememberME.AutoSize = true;
-            this.chbRememberME.Location = new System.Drawing.Point(18, 215);
-            this.chbRememberME.Name = "chbRememberME";
-            this.chbRememberME.Size = new System.Drawing.Size(149, 24);
-            this.chbRememberME.TabIndex = 12;
-            this.chbRememberME.Text = "Remember Me?";
-            this.chbRememberME.UseVisualStyleBackColor = true;
-            // 
             // FrmAdminLogin
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;

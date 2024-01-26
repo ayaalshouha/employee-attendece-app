@@ -28,16 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvEmployeesList = new System.Windows.Forms.DataGridView();
+            this.lblRecordNumber = new System.Windows.Forms.Label();
+            this.lblRecordsNum = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.btnClose = new System.Windows.Forms.Button();
+            this.showEmployeeCardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editEmployeeInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteEmployeeRowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmployeesList)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.MidnightBlue;
+            this.pnlHeader.Controls.Add(this.btnClose);
             this.pnlHeader.Controls.Add(this.label1);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
@@ -56,29 +69,149 @@
             this.label1.TabIndex = 21;
             this.label1.Text = "Employees List";
             // 
-            // dataGridView1
+            // dgvEmployeesList
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 221);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1060, 409);
-            this.dataGridView1.TabIndex = 3;
+            this.dgvEmployeesList.AllowUserToAddRows = false;
+            this.dgvEmployeesList.AllowUserToDeleteRows = false;
+            this.dgvEmployeesList.BackgroundColor = System.Drawing.Color.White;
+            this.dgvEmployeesList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmployeesList.Location = new System.Drawing.Point(18, 143);
+            this.dgvEmployeesList.Name = "dgvEmployeesList";
+            this.dgvEmployeesList.ReadOnly = true;
+            this.dgvEmployeesList.RowHeadersWidth = 62;
+            this.dgvEmployeesList.RowTemplate.Height = 28;
+            this.dgvEmployeesList.Size = new System.Drawing.Size(1060, 487);
+            this.dgvEmployeesList.TabIndex = 3;
+            this.dgvEmployeesList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmployeesList_CellClick);
+            // 
+            // lblRecordNumber
+            // 
+            this.lblRecordNumber.AutoSize = true;
+            this.lblRecordNumber.Font = new System.Drawing.Font("Simplified Arabic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecordNumber.ForeColor = System.Drawing.Color.Black;
+            this.lblRecordNumber.Location = new System.Drawing.Point(141, 630);
+            this.lblRecordNumber.Name = "lblRecordNumber";
+            this.lblRecordNumber.Size = new System.Drawing.Size(87, 38);
+            this.lblRecordNumber.TabIndex = 11;
+            this.lblRecordNumber.Text = "Number";
+            // 
+            // lblRecordsNum
+            // 
+            this.lblRecordsNum.AutoSize = true;
+            this.lblRecordsNum.Font = new System.Drawing.Font("Simplified Arabic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecordsNum.ForeColor = System.Drawing.Color.Black;
+            this.lblRecordsNum.Location = new System.Drawing.Point(33, 630);
+            this.lblRecordsNum.Name = "lblRecordsNum";
+            this.lblRecordsNum.Size = new System.Drawing.Size(123, 38);
+            this.lblRecordsNum.TabIndex = 10;
+            this.lblRecordsNum.Text = "# Records: ";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox1.Location = new System.Drawing.Point(336, 102);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(211, 26);
+            this.textBox1.TabIndex = 14;
+            this.textBox1.Visible = false;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBox1.BackColor = System.Drawing.SystemColors.Menu;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.ItemHeight = 20;
+            this.comboBox1.Location = new System.Drawing.Point(115, 102);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(211, 28);
+            this.comboBox1.TabIndex = 13;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Simplified Arabic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(23, 95);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 38);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Filter by:";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showEmployeeCardToolStripMenuItem,
+            this.editEmployeeInfoToolStripMenuItem,
+            this.deleteEmployeeRowToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(265, 100);
+            // 
+            // btnClose
+            // 
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnClose.Image = global::Employees_Attendence_System.Properties.Resources.arrow_left1;
+            this.btnClose.Location = new System.Drawing.Point(3, 8);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(65, 74);
+            this.btnClose.TabIndex = 15;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // showEmployeeCardToolStripMenuItem
+            // 
+            this.showEmployeeCardToolStripMenuItem.Image = global::Employees_Attendence_System.Properties.Resources.personal_photo;
+            this.showEmployeeCardToolStripMenuItem.Name = "showEmployeeCardToolStripMenuItem";
+            this.showEmployeeCardToolStripMenuItem.Size = new System.Drawing.Size(264, 32);
+            this.showEmployeeCardToolStripMenuItem.Text = "Show Employee Card";
+            // 
+            // editEmployeeInfoToolStripMenuItem
+            // 
+            this.editEmployeeInfoToolStripMenuItem.Image = global::Employees_Attendence_System.Properties.Resources.edit;
+            this.editEmployeeInfoToolStripMenuItem.Name = "editEmployeeInfoToolStripMenuItem";
+            this.editEmployeeInfoToolStripMenuItem.Size = new System.Drawing.Size(264, 32);
+            this.editEmployeeInfoToolStripMenuItem.Text = "Edit Employee Info";
+            // 
+            // deleteEmployeeRowToolStripMenuItem
+            // 
+            this.deleteEmployeeRowToolStripMenuItem.Image = global::Employees_Attendence_System.Properties.Resources.delete;
+            this.deleteEmployeeRowToolStripMenuItem.Name = "deleteEmployeeRowToolStripMenuItem";
+            this.deleteEmployeeRowToolStripMenuItem.Size = new System.Drawing.Size(264, 32);
+            this.deleteEmployeeRowToolStripMenuItem.Text = "Delete Employee Row";
             // 
             // FrmEmployeesList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1096, 717);
-            this.Controls.Add(this.dataGridView1);
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.CancelButton = this.btnClose;
+            this.ClientSize = new System.Drawing.Size(1096, 676);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblRecordNumber);
+            this.Controls.Add(this.lblRecordsNum);
+            this.Controls.Add(this.dgvEmployeesList);
             this.Controls.Add(this.pnlHeader);
             this.Name = "FrmEmployeesList";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employees list";
+            this.Load += new System.EventHandler(this.FrmEmployeesList_Load);
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmployeesList)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -86,6 +219,16 @@
 
         private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvEmployeesList;
+        private System.Windows.Forms.Label lblRecordNumber;
+        private System.Windows.Forms.Label lblRecordsNum;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem showEmployeeCardToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editEmployeeInfoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteEmployeeRowToolStripMenuItem;
     }
 }

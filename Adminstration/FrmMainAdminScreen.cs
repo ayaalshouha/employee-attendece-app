@@ -1,4 +1,5 @@
-﻿using Employees_Attendence_System.Employees;
+﻿using Employees_Attendence_System.Adminstration.MainScreen_Forms;
+using Employees_Attendence_System.Employees;
 using Employees_Attendence_System.Global;
 using Employees_Attendence_System.Leave_Request;
 using Employees_Attendence_System.Users;
@@ -82,6 +83,8 @@ namespace Employees_Attendence_System.Adminstration
         private void employeesListToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //employees list form 
+           FrmEmployeesList form = new FrmEmployeesList();
+            form.ShowDialog();
         }
     }
 }

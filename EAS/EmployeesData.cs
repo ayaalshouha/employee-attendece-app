@@ -193,7 +193,7 @@ namespace EAS_Data
             SqlConnection Connection = new SqlConnection(DataSettings.ConnectionString);
             try
             {
-                string Query = "SELECT * FROM Employees;";
+                string Query = "SELECT * FROM Employees_List;";
                 SqlCommand command = new SqlCommand(Query, Connection);
 
                 Connection.Open();
