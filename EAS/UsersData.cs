@@ -215,6 +215,29 @@ namespace EAS_Data
             return isFound;
         }
 
+        public static bool isExist_ByEMP_Code(int Emp_id)
+        {
+            bool isFound = false;
+            SqlConnection Connection = new SqlConnection(DataSettings.ConnectionString);
+            try
+            {
+                string Query = "SELECT ID FROM Users WHERE EmployeeID = @Emp_id;";
+                SqlCommand command = new SqlCommand(Query, Connection);
+                command.Parameters.AddWithValue("@Emp_id", Emp_id);
+                Connection.Open();
+                object result = command.ExecuteScalar();
+                isFound = (result != null);
+            }
+            catch (Exception ex)
+            {
+                DataSettings.StoreUsingEventLogs(ex.Message.ToString());
+            }
+            finally
+            {
+                Connection.Close();
+            }
+            return isFound;
+        }
         public static bool isExist(string username)
         {
             bool isFound = false;

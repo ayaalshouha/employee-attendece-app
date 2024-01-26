@@ -101,9 +101,12 @@ namespace EAS_Buissness
             return false;
         }
 
-        public bool Delete()
+        public static bool Delete(int EmployeeID)
         {
-            return EmployeesData.Delete(this.ID);
+            if (!clsUser.isExist_ByEMP_Code(EmployeeID))
+                return EmployeesData.Delete(EmployeeID);
+            else
+                return false; 
         }
 
         public static bool isExist_ByPersonID(int PersonID)

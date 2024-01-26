@@ -103,12 +103,24 @@ namespace Employees_Attendence_System.Adminstration.MainScreen_Forms
 
         private void dgvEmployeesList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            int EmployeeID = (int)dgvEmployeesList.CurrentRow.Cells[0].Value; 
+
             if (e.RowIndex >= 0 && e.ColumnIndex == dgvEmployeesList.Columns["EditButtonColumn"].Index)
             {
                //edit form 
+
             }else if (e.RowIndex >= 0 && e.ColumnIndex == dgvEmployeesList.Columns["DeleteButtonColumn"].Index)
             {
-                //delete employee action
+                if(MessageBox.Show($"are you sure you want to delete employee with EMP_CODE {EmployeeID} ??", "Message Box",
+                    MessageBoxButtons.YesNo , MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    if (clsEmployee.Delete(EmployeeID))
+                        MessageBox.Show($"Employee details deleted successfully.", "Message Box",
+                         MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        MessageBox.Show($"Employee details are associated with another information in the system, can't be deleted!", "Message Box",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
                 return; 

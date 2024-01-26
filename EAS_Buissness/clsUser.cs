@@ -125,6 +125,11 @@ namespace EAS_Buissness
             return UsersData.isExist(ID);
         }
 
+        public static bool isExist_ByEMP_Code(int EMP_Code)
+        {
+            return UsersData.isExist_ByEMP_Code(EMP_Code);
+        }
+
         public static bool isExist(string username)
         {
             return UsersData.isExist(username);
