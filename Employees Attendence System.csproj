@@ -59,6 +59,12 @@
     <Compile Include="Adminstration\FrmMainAdminScreen.Designer.cs">
       <DependentUpon>FrmMainAdminScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Adminstration\MainScreen Forms\FrmEmployeesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adminstration\MainScreen Forms\FrmEmployeesList.Designer.cs">
+      <DependentUpon>FrmEmployeesList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Attendences\FrmCheckInOut.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Adminstration\FrmMainAdminScreen.resx">
       <DependentUpon>FrmMainAdminScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adminstration\MainScreen Forms\FrmEmployeesList.resx">
+      <DependentUpon>FrmEmployeesList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Attendences\FrmCheckInOut.resx">
       <DependentUpon>FrmCheckInOut.cs</DependentUpon>

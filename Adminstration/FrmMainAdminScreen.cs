@@ -68,5 +68,20 @@ namespace Employees_Attendence_System.Adminstration
             _Login.Show();
             this.Close();
         }
+
+        private void employeesListToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            //employees list report  
+        }
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            //leave requests list report 
+        }
+
+        private void employeesListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //employees list form 
+        }
     }
 }
