@@ -23,8 +23,6 @@ namespace Employees_Attendence_System.UserControls
                 this.SelectedEmployee = employee;
             }
         }
-
-        //declare event handler 
         public event EventHandler<EmployeeSelectedEventArgs> onEmployeeSelected;
 
         public void RaiseOnLicenseSelected(clsEmployee employee)

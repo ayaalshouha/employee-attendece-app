@@ -1,4 +1,5 @@
 ﻿using EAS_Buissness;
+using Employees_Attendence_System.Employees;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace Employees_Attendence_System.Adminstration.MainScreen_Forms
 {
@@ -16,6 +18,12 @@ namespace Employees_Attendence_System.Adminstration.MainScreen_Forms
         public FrmEmployeesList()
         {
             InitializeComponent();
+        }
+
+        private void _RefreshDatGridView()
+        {
+            dgvEmployeesList.DataSource = clsEmployee.EmployeesList();
+            lblRecordNumber.Text = dgvEmployeesList.RowCount.ToString();
         }
 
         private void FrmEmployeesList_Load(object sender, EventArgs e)
@@ -37,24 +45,32 @@ namespace Employees_Attendence_System.Adminstration.MainScreen_Forms
 
             DataGridViewButtonColumn EditBtnCloumn = new DataGridViewButtonColumn();
             DataGridViewButtonColumn DeleteBtnColumn = new DataGridViewButtonColumn();
+            DataGridViewButtonColumn PreviewBtnColumn = new DataGridViewButtonColumn();
 
             EditBtnCloumn.Name = "EditButtonColumn";
-            DeleteBtnColumn.Name = "DeleteButtonColumn"; 
+            DeleteBtnColumn.Name = "DeleteButtonColumn";
+            PreviewBtnColumn.Name = "PreviewButtonColumn"; 
+
 
             EditBtnCloumn.HeaderText = "";
-            DeleteBtnColumn.HeaderText = ""; 
+            DeleteBtnColumn.HeaderText = "";
+            PreviewBtnColumn.HeaderText = "";
 
+            PreviewBtnColumn.Text = "PREVIEW"; 
             EditBtnCloumn.Text = "EDIT";
-            DeleteBtnColumn.Text = "DELETE"; 
+            DeleteBtnColumn.Text = "DELETE";
 
+            PreviewBtnColumn.Width = 60; 
             EditBtnCloumn.Width = 40;
             DeleteBtnColumn.Width = 53;
 
             DeleteBtnColumn.UseColumnTextForButtonValue = true;
             EditBtnCloumn.UseColumnTextForButtonValue = true;
+            PreviewBtnColumn.UseColumnTextForButtonValue = true; 
 
             dgvEmployeesList.Columns.Add(EditBtnCloumn);
             dgvEmployeesList.Columns.Add(DeleteBtnColumn);
+            dgvEmployeesList.Columns.Add(PreviewBtnColumn);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -103,13 +119,19 @@ namespace Employees_Attendence_System.Adminstration.MainScreen_Forms
 
         private void dgvEmployeesList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int EmployeeID = (int)dgvEmployeesList.CurrentRow.Cells[0].Value; 
+            int EmployeeID = (int)dgvEmployeesList.CurrentRow.Cells[0].Value;
 
-            if (e.RowIndex >= 0 && e.ColumnIndex == dgvEmployeesList.Columns["EditButtonColumn"].Index)
+            int index = e.ColumnIndex;
+            int EditIndex = dgvEmployeesList.Columns["EditButtonColumn"].Index;
+            int DeleteIndex = dgvEmployeesList.Columns["DeleteButtonColumn"].Index;
+            int PreviewIndex = dgvEmployeesList.Columns["PreviewButtonColumn"].Index;
+
+            if (e.RowIndex >= 0 && e.ColumnIndex == EditIndex)
             {
-               //edit form 
+               //Add/Edit form 
+            }
 
-            }else if (e.RowIndex >= 0 && e.ColumnIndex == dgvEmployeesList.Columns["DeleteButtonColumn"].Index)
+            if (e.RowIndex >= 0 && e.ColumnIndex == DeleteIndex)
             {
                 if(MessageBox.Show($"are you sure you want to delete employee with EMP_CODE {EmployeeID} ??", "Message Box",
                     MessageBoxButtons.YesNo , MessageBoxIcon.Question) == DialogResult.Yes)
@@ -122,8 +144,13 @@ namespace Employees_Attendence_System.Adminstration.MainScreen_Forms
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else
-                return; 
+
+            if(e.RowIndex >= 0 && e.ColumnIndex == PreviewIndex)
+            {
+                //preview code 
+                FrmFindEmployee form = new FrmFindEmployee(EmployeeID);
+                form.ShowDialog(); 
+            }
         }
     }
 }

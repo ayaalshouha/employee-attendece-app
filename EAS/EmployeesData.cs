@@ -17,7 +17,7 @@ namespace EAS_Data
 
             try
             {
-                string Query = "select * from Employees where ID = @EmployeeID;";
+                string Query = "select * from Employees where EMP_Code = @EmployeeID;";
                 SqlCommand Command = new SqlCommand(Query, Connection);
                 Command.Parameters.AddWithValue("@EmployeeID", EmployeeID);
 
@@ -27,15 +27,15 @@ namespace EAS_Data
                 while (Reader.Read())
                 {
                     isFound = true;
-                    employee.ID = (int)Reader["ID"];
+                    employee.ID = (int)Reader["EMP_Code"];
                     employee.PersonID = (int)Reader["PersonID"];
-                    employee.EmployeeDepartmentID = (int)Reader["EmployeeDepartmentID"];
-                    employee.WorkedFrom = (DateTime)Reader["WorkedFrom"];
+                    employee.EmployeeDepartmentID = (int)Reader["DepartmentID"];
+                    employee.WorkedFrom = (DateTime)Reader["HireDate"];
 
-                    if(Reader["WorkedTo"] == DBNull.Value)
+                    if(Reader["LeaveDate"] == DBNull.Value)
                         employee.WorkedTo = null;
                     else
-                        employee.WorkedTo = (DateTime)Reader["WorkedTo"];
+                        employee.WorkedTo = (DateTime)Reader["LeaveDate"];
                 }
 
                 Reader.Close();
@@ -62,20 +62,20 @@ namespace EAS_Data
             try
             {
                 string Query = @"INSERT INTO  
-                        Employees   (PersonID,EmployeeDepartmentID,WorkedFrom,WorkedTo)
-                        VALUES  (@PersonID, @EmployeeDepartmentID, @WorkedFrom, @WorkedTo);
+                        Employees   (PersonID,DepartmentID,HireDate,LeaveDate)
+                        VALUES  (@PersonID, @DepartmentID, @HireDate, @LeaveDate);
                           SELECT SCOPE_IDENTITY();";
 
                 SqlCommand Command = new SqlCommand(Query, Connection);
 
                 Command.Parameters.AddWithValue("@PersonID", employee.PersonID);
-                Command.Parameters.AddWithValue("@EmployeeDepartmentID", employee.EmployeeDepartmentID);
-                Command.Parameters.AddWithValue("@WorkedFrom", employee.WorkedFrom);
+                Command.Parameters.AddWithValue("@DepartmentID", employee.EmployeeDepartmentID);
+                Command.Parameters.AddWithValue("@HireDate", employee.WorkedFrom);
 
                 if (employee.WorkedTo == DateTime.MinValue)
-                    Command.Parameters.AddWithValue("@WorkedTo", DBNull.Value);
+                    Command.Parameters.AddWithValue("@LeaveDate", DBNull.Value);
                 else
-                    Command.Parameters.AddWithValue("@WorkedTo", employee.WorkedTo);
+                    Command.Parameters.AddWithValue("@LeaveDate", employee.WorkedTo);
 
                 Connection.Open();
                 object result = Command.ExecuteScalar();
@@ -106,9 +106,9 @@ namespace EAS_Data
             try
             {
                 string Query = @"Update Employees
-                    SET EmployeeDepartmentID = @EmployeeDepartmentID,
-                        WorkedTo = @WorkedTo
-                        WHERE ID = @employeeID;";
+                    SET DepartmentID = @EmployeeDepartmentID,
+                        LeaveDate = @LeaveDate
+                        WHERE EMP_Code = @employeeID;";
 
 
                 SqlCommand Command = new SqlCommand(Query, Connection);
@@ -117,9 +117,9 @@ namespace EAS_Data
 
 
                 if (employee.WorkedTo == DateTime.MinValue)
-                    Command.Parameters.AddWithValue("@WorkedTo", DBNull.Value);
+                    Command.Parameters.AddWithValue("@LeaveDate", DBNull.Value);
                 else
-                    Command.Parameters.AddWithValue("@WorkedTo", employee.WorkedTo);
+                    Command.Parameters.AddWithValue("@LeaveDate", employee.WorkedTo);
 
 
                 Connection.Open();
@@ -145,7 +145,7 @@ namespace EAS_Data
             SqlConnection Connection = new SqlConnection(DataSettings.ConnectionString);
             try
             {
-                string Query = "DELETE  FROM Employees WHERE ID = @EmployeeID;";
+                string Query = "DELETE FROM Employees WHERE EMP_Code = @EmployeeID;";
                 SqlCommand command = new SqlCommand(Query, Connection);
                 command.Parameters.AddWithValue("@EmployeeID", EmployeeID);
                 Connection.Open();
@@ -169,7 +169,7 @@ namespace EAS_Data
             SqlConnection Connection = new SqlConnection(DataSettings.ConnectionString);
             try
             {
-                string Query = "SELECT ID FROM Employees WHERE PersonID = @PersonID;";
+                string Query = "SELECT EMP_Code FROM Employees WHERE PersonID = @PersonID;";
                 SqlCommand command = new SqlCommand(Query, Connection);
                 command.Parameters.AddWithValue("@PersonID", PersonID);
                 Connection.Open();
