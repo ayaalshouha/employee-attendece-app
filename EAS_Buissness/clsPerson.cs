@@ -161,5 +161,11 @@ namespace EAS_Buissness
             return PeopleData.List();
         }
 
+        public static DataTable CountriesList()
+        {
+            return PeopleData.GetAllCountries();
+        }
+
+
     }
 }

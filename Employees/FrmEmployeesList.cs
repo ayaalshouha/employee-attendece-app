@@ -129,6 +129,8 @@ namespace Employees_Attendence_System.Adminstration.MainScreen_Forms
             if (e.RowIndex >= 0 && e.ColumnIndex == EditIndex)
             {
                //Add/Edit form 
+               FrmAddUpdateEmployee form = new FrmAddUpdateEmployee(EmployeeID);
+                form.ShowDialog();
             }
 
             if (e.RowIndex >= 0 && e.ColumnIndex == DeleteIndex)

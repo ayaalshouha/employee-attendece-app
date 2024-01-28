@@ -26,3 +26,4 @@ C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\obj\Deb
 C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\obj\Debug\Employees_Attendence_System.Users.FrmUserInformation.resources
 C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\obj\Debug\Employees_Attendence_System.Users.FrmChangePassword.resources
 C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\obj\Debug\Employees_Attendence_System.Adminstration.MainScreen_Forms.FrmEmployeesList.resources
+C:\Users\lenovo\Desktop\Coding\.NET Projects\Employees Attendence System\obj\Debug\Employees_Attendence_System.Employees.FrmAddUpdateEmployee.resources

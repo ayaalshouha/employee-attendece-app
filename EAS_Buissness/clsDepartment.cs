@@ -98,12 +98,9 @@ namespace EAS_Buissness
         {
             return DepartmentsData.Delete(this.ID);
         }
-
-
         public static DataTable DepartmentsList()
         {
-            return DepartmentsData.List();
+            return DepartmentsData.GetAllDepartments();
         }
-
     }
 }

@@ -100,6 +100,7 @@
             this.btnClose.Size = new System.Drawing.Size(65, 74);
             this.btnClose.TabIndex = 15;
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // lblHeader
             // 
@@ -123,7 +124,7 @@
             this.dtpBirthdate.Name = "dtpBirthdate";
             this.dtpBirthdate.Size = new System.Drawing.Size(171, 26);
             this.dtpBirthdate.TabIndex = 128;
-            this.dtpBirthdate.Value = new System.DateTime(2023, 9, 6, 3, 18, 47, 0);
+            this.dtpBirthdate.Value = new System.DateTime(2024, 1, 28, 0, 0, 0, 0);
             this.dtpBirthdate.ValueChanged += new System.EventHandler(this.dateTimeBirthdate_ValueChanged);
             // 
             // label12
@@ -151,7 +152,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(360, 92);
+            this.label11.Location = new System.Drawing.Point(444, 95);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(130, 20);
             this.label11.TabIndex = 140;
@@ -160,7 +161,7 @@
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(503, 89);
+            this.txtPhone.Location = new System.Drawing.Point(587, 92);
             this.txtPhone.Mask = "(999) 000-0000";
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(171, 26);
@@ -361,16 +362,18 @@
             // btnSave
             // 
             this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSave.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(851, 91);
+            this.btnSave.Location = new System.Drawing.Point(828, 524);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(89, 43);
             this.btnSave.TabIndex = 116;
             this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label15
@@ -409,7 +412,7 @@
             this.groupBox1.Controls.Add(this.txtFirstName);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Location = new System.Drawing.Point(11, 140);
+            this.groupBox1.Location = new System.Drawing.Point(9, 125);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(931, 391);
             this.groupBox1.TabIndex = 146;
@@ -524,10 +527,12 @@
             // 
             // FrmAddUpdateEmployee
             // 
+            this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(952, 539);
+            this.CancelButton = this.btnClose;
+            this.ClientSize = new System.Drawing.Size(952, 579);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.btnSave);
@@ -536,7 +541,8 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmAddUpdateEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmAddUpdateEmployee";
+            this.Text = "Add/Update Employee Form";
+            this.Load += new System.EventHandler(this.FrmAddUpdateEmployee_Load);
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

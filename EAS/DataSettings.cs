@@ -81,8 +81,6 @@ namespace EAS_Data
     public class DataSettings
     {
         public static string ConnectionString = ConfigurationManager.AppSettings["ConnectionString"]; 
-
-           //"server=.; database=AttendenceEmployeesSystem; user id=sa; password=sa123456;";
         public static void StoreUsingEventLogs(string message)
         {
             string sourceName = "AttendenceApp";
@@ -92,37 +90,5 @@ namespace EAS_Data
 
             EventLog.WriteEntry(sourceName, message, EventLogEntryType.Error);
         }
-
-        //public static List<string> GetAllCountries()
-        //{
-        //    SqlConnection connection = new SqlConnection(DataSettings.ConnectionString);
-        //    List<string> Countries = new List<string>();
-        //    try
-        //    {
-        //        string Query = "SELECT nicename From Countries;";
-        //        SqlCommand command = new SqlCommand(Query, connection);
-
-        //        connection.Open();
-        //        SqlDataReader reader = command.ExecuteReader();
-
-        //        while (reader.Read())
-        //        {
-        //            Countries.Add(reader["nicename"].ToString());
-        //        }
-
-        //        reader.Close();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Console.WriteLine("Error: " + ex.Message);
-        //    }
-        //    finally
-        //    {
-        //        connection.Close();
-        //    }
-
-        //    return Countries;
-        //}
-
     }
 }

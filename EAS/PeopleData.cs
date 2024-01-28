@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Remoting.Messaging;
 
 namespace EAS_Data
 {
@@ -249,6 +250,37 @@ namespace EAS_Data
             {
                 Connection.Close();
             }
+            return dt;
+        }
+
+        public static DataTable GetAllCountries()
+        {
+            SqlConnection connection = new SqlConnection(DataSettings.ConnectionString);
+            DataTable dt = new DataTable();
+            try
+            {
+                string Query = "SELECT nicename From Countries;";
+                SqlCommand command = new SqlCommand(Query, connection);
+
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.HasRows)
+                {
+                    dt.Load(reader);
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+
             return dt;
         }
     }

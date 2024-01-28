@@ -238,32 +238,35 @@ namespace EAS_Data
             return isFound;
         }
 
-        public static DataTable List()
+        public static DataTable GetAllDepartments()
         {
-            DataTable dt = new DataTable();
-            SqlConnection Connection = new SqlConnection(DataSettings.ConnectionString);
+            SqlConnection connection = new SqlConnection(DataSettings.ConnectionString);
+            DataTable Countries = new DataTable();
             try
             {
-                string Query = "SELECT * FROM Departments;";
-                SqlCommand command = new SqlCommand(Query, Connection);
+                string Query = "SELECT Name From Departments;";
+                SqlCommand command = new SqlCommand(Query, connection);
 
-                Connection.Open();
-                SqlDataReader Reader = command.ExecuteReader();
-                if (Reader.HasRows)
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.HasRows)
                 {
-                    dt.Load(Reader);
+                    Countries.Load(reader);
                 }
-                Reader.Close();
+
+                reader.Close();
             }
             catch (Exception ex)
             {
-                DataSettings.StoreUsingEventLogs(ex.Message.ToString());
+                Console.WriteLine("Error: " + ex.Message);
             }
             finally
             {
-                Connection.Close();
+                connection.Close();
             }
-            return dt;
+
+            return Countries;
         }
     }
 }
