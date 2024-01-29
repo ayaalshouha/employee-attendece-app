@@ -1,4 +1,5 @@
 ﻿using EAS_Buissness;
+using Employees_Attendence_System.Global;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,181 +28,76 @@ namespace Employees_Attendence_System.Employees
             _Mode = _EmployeeID == -1 ? enMode.add : enMode.update;
         }
         
-
-        private void txtSecondName_TextChanged(object sender, EventArgs e)
+        private void _AssignInformation(clsEmployee Employee)
         {
-
+            
         }
-
-        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
-        {
-
-        }
-
-        private void dateTimeBirthdate_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNationalNo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbCountries_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPhone_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtAddress_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtEmail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rdFemale_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rdMale_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblSetImage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
-        private void pbDefaultPicture_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtLastName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtThirdName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void llRemoveImage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
-        private void txtFirstName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
-        {
-
-        }
-
-        private void lblID_Click(object sender, EventArgs e)
-        {
-
-        }
-
+      
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (!this.ValidateChildren())
+                return; 
 
+            if(_Mode == enMode.add)
+            {
+                _Person = new clsPerson();
+
+                _Person.FirstName = txtFirstName.Text; 
+                _Person.LastName = txtLastName.Text;
+                _Person.Email = txtEmail.Text;
+                _Person.SecondName = txtSecondName.Text;
+                _Person.ThirdName = txtThirdName.Text;
+                _Person.PhoneNumber = txtPhone.Text;
+                _Person.BirthDate = dtpBirthdate.Value;
+                _Person.Nationality = cbCountries.Text.Trim();
+                _Person.Address = txtAddress.Text;
+                _Person.Gender = rdFemale.Checked ? "Female" : "Male";
+
+                if (_Person.Save())
+                {
+                    _PerosnID = _Person.ID; 
+                    _Employee = new clsEmployee();
+                    _Employee.PersonID = _PerosnID;
+                    _Employee.EmployeeDepartmentID = cbDepartmentsOptions.SelectedIndex + 1;
+                    _Employee.WorkedFrom = dtpHireDate.Value;
+
+                    if (_Employee.Save())
+                    {
+                        _EmployeeID = _Employee.ID;
+                        if(MessageBox.Show("Are you sure you want to save information?",
+                            "Message Box", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            MessageBox.Show($"Employee with ID {_Employee.ID} saved successfully :-)",
+                            "Message Box", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            _Mode = enMode.update;
+                            lblHeader.Text = "Update Employee";
+                            lblID.Text = _PerosnID.ToString();
+                            lblEmploymentID.Text = _EmployeeID.ToString();
+
+                            return; 
+                        }
+                    }
+                }
+                
+                MessageBox.Show("Something went wrong during saving information :-( , Try again later!",
+                "Message Box", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void label15_Click(object sender, EventArgs e)
+        private void ValidateEmptyTextBox(object sender, CancelEventArgs e)
         {
-
+            //set autovalidate property
+            TextBox Temp = (TextBox)sender;
+            if (string.IsNullOrEmpty(Temp.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(Temp, "This is required");
+            }
+            else
+                errorProvider1.SetError(Temp, null);
         }
 
-        private void lblHeader_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void LoadEmployeeInfo(clsEmployee employee)
         {
@@ -250,7 +146,11 @@ namespace Employees_Attendence_System.Employees
         private void SetDefaultValues()
         {
             if (_Mode == enMode.add)
+            {
                 rdMale.Checked = true;
+                dtpLeaveDate.Enabled = false;
+            }
+               
 
             //set the max date to 18 years from now 
             dtpBirthdate.MaxDate = DateTime.Now.AddDays(-18);
@@ -271,6 +171,9 @@ namespace Employees_Attendence_System.Employees
             {
                 cbDepartmentsOptions.Items.Add(row["Name"]);
             }
+
+            cbCountries.SelectedIndex = cbCountries.FindString("Jordan");
+            cbDepartmentsOptions.SelectedIndex = cbDepartmentsOptions.FindString("Adminstration");
         }
         private void FrmAddUpdateEmployee_Load(object sender, EventArgs e)
         {
@@ -287,6 +190,17 @@ namespace Employees_Attendence_System.Employees
                 _Employee = clsEmployee.Find(_EmployeeID);
                 LoadEmployeeInfo(_Employee); 
             }
+        }
+
+        private void txtEmail_Validating(object sender, CancelEventArgs e)
+        {
+            if (!clsGlobal.ValidateEmail(txtEmail.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtEmail, "NOT a valid E-mail!");
+            }
+            else
+                errorProvider1.SetError(txtEmail, null);
         }
     }
 }

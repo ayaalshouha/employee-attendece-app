@@ -61,15 +61,15 @@
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dtpLeaveDate = new System.Windows.Forms.DateTimePicker();
+            this.label20 = new System.Windows.Forms.Label();
+            this.dtpHireDate = new System.Windows.Forms.DateTimePicker();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.cbDepartmentsOptions = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.lblEmploymentID = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.cbDepartmentsOptions = new System.Windows.Forms.ComboBox();
-            this.dtpHireDate = new System.Windows.Forms.DateTimePicker();
-            this.label19 = new System.Windows.Forms.Label();
-            this.dtpLeaveDate = new System.Windows.Forms.DateTimePicker();
-            this.label20 = new System.Windows.Forms.Label();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -125,7 +125,7 @@
             this.dtpBirthdate.Size = new System.Drawing.Size(171, 26);
             this.dtpBirthdate.TabIndex = 128;
             this.dtpBirthdate.Value = new System.DateTime(2024, 1, 28, 0, 0, 0, 0);
-            this.dtpBirthdate.ValueChanged += new System.EventHandler(this.dateTimeBirthdate_ValueChanged);
+            //this.dtpBirthdate.ValueChanged += new System.EventHandler(this.dateTimeBirthdate_ValueChanged);
             // 
             // label12
             // 
@@ -136,7 +136,7 @@
             this.label12.Size = new System.Drawing.Size(71, 20);
             this.label12.TabIndex = 141;
             this.label12.Text = "Country";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
+            //this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // cbCountries
             // 
@@ -146,7 +146,7 @@
             this.cbCountries.Name = "cbCountries";
             this.cbCountries.Size = new System.Drawing.Size(171, 28);
             this.cbCountries.TabIndex = 130;
-            this.cbCountries.SelectedIndexChanged += new System.EventHandler(this.cbCountries_SelectedIndexChanged);
+            //this.cbCountries.SelectedIndexChanged += new System.EventHandler(this.cbCountries_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -157,7 +157,7 @@
             this.label11.Size = new System.Drawing.Size(130, 20);
             this.label11.TabIndex = 140;
             this.label11.Text = "Phone number:";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
+            //this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // txtPhone
             // 
@@ -166,7 +166,8 @@
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(171, 26);
             this.txtPhone.TabIndex = 129;
-            this.txtPhone.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtPhone_MaskInputRejected);
+            //this.txtPhone.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtPhone_MaskInputRejected);
+            this.txtPhone.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
             // 
             // label10
             // 
@@ -177,7 +178,7 @@
             this.label10.Size = new System.Drawing.Size(112, 20);
             this.label10.TabIndex = 139;
             this.label10.Text = "Date of Birth";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
+            //this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label9
             // 
@@ -187,7 +188,7 @@
             this.label9.Size = new System.Drawing.Size(40, 20);
             this.label9.TabIndex = 145;
             this.label9.Text = "Last";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
+            //this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label8
             // 
@@ -197,7 +198,7 @@
             this.label8.Size = new System.Drawing.Size(44, 20);
             this.label8.TabIndex = 144;
             this.label8.Text = "Third";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+            //this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label7
             // 
@@ -207,7 +208,7 @@
             this.label7.Size = new System.Drawing.Size(64, 20);
             this.label7.TabIndex = 143;
             this.label7.Text = "Second";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            //this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // txtAddress
             // 
@@ -216,7 +217,8 @@
             this.txtAddress.Size = new System.Drawing.Size(250, 74);
             this.txtAddress.TabIndex = 131;
             this.txtAddress.Text = "";
-            this.txtAddress.TextChanged += new System.EventHandler(this.txtAddress_TextChanged);
+            //this.txtAddress.TextChanged += new System.EventHandler(this.txtAddress_TextChanged);
+            this.txtAddress.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
             // 
             // txtEmail
             // 
@@ -224,7 +226,8 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(171, 26);
             this.txtEmail.TabIndex = 127;
-            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
+            //this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
+            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
             // 
             // rdFemale
             // 
@@ -236,7 +239,7 @@
             this.rdFemale.TabStop = true;
             this.rdFemale.Text = "Female";
             this.rdFemale.UseVisualStyleBackColor = true;
-            this.rdFemale.CheckedChanged += new System.EventHandler(this.rdFemale_CheckedChanged);
+            //this.rdFemale.CheckedChanged += new System.EventHandler(this.rdFemale_CheckedChanged);
             // 
             // rdMale
             // 
@@ -248,7 +251,7 @@
             this.rdMale.TabStop = true;
             this.rdMale.Text = "Male";
             this.rdMale.UseVisualStyleBackColor = true;
-            this.rdMale.CheckedChanged += new System.EventHandler(this.rdMale_CheckedChanged);
+            //this.rdMale.CheckedChanged += new System.EventHandler(this.rdMale_CheckedChanged);
             // 
             // txtLastName
             // 
@@ -256,7 +259,8 @@
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(171, 26);
             this.txtLastName.TabIndex = 123;
-            this.txtLastName.TextChanged += new System.EventHandler(this.txtLastName_TextChanged);
+            //this.txtLastName.TextChanged += new System.EventHandler(this.txtLastName_TextChanged);
+            this.txtLastName.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
             // 
             // txtThirdName
             // 
@@ -264,7 +268,7 @@
             this.txtThirdName.Name = "txtThirdName";
             this.txtThirdName.Size = new System.Drawing.Size(171, 26);
             this.txtThirdName.TabIndex = 122;
-            this.txtThirdName.TextChanged += new System.EventHandler(this.txtThirdName_TextChanged);
+            //this.txtThirdName.TextChanged += new System.EventHandler(this.txtThirdName_TextChanged);
             // 
             // txtSecondName
             // 
@@ -272,7 +276,8 @@
             this.txtSecondName.Name = "txtSecondName";
             this.txtSecondName.Size = new System.Drawing.Size(171, 26);
             this.txtSecondName.TabIndex = 121;
-            this.txtSecondName.TextChanged += new System.EventHandler(this.txtSecondName_TextChanged);
+            //this.txtSecondName.TextChanged += new System.EventHandler(this.txtSecondName_TextChanged);
+            this.txtSecondName.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
             // 
             // txtFirstName
             // 
@@ -280,7 +285,8 @@
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(171, 26);
             this.txtFirstName.TabIndex = 120;
-            this.txtFirstName.TextChanged += new System.EventHandler(this.txtFirstName_TextChanged);
+            //this.txtFirstName.TextChanged += new System.EventHandler(this.txtFirstName_TextChanged);
+            this.txtFirstName.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
             // 
             // label6
             // 
@@ -290,7 +296,7 @@
             this.label6.Size = new System.Drawing.Size(40, 20);
             this.label6.TabIndex = 142;
             this.label6.Text = "First";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            //this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -301,7 +307,7 @@
             this.label5.Size = new System.Drawing.Size(75, 20);
             this.label5.TabIndex = 138;
             this.label5.Text = "Address";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            //this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -312,7 +318,7 @@
             this.label4.Size = new System.Drawing.Size(53, 20);
             this.label4.TabIndex = 137;
             this.label4.Text = "Email";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            //this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -323,7 +329,7 @@
             this.label3.Size = new System.Drawing.Size(69, 20);
             this.label3.TabIndex = 136;
             this.label3.Text = "Gender";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            //this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label14
             // 
@@ -334,7 +340,7 @@
             this.label14.Size = new System.Drawing.Size(55, 20);
             this.label14.TabIndex = 134;
             this.label14.Text = "Name";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
+            //this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // label2
             // 
@@ -345,7 +351,7 @@
             this.label2.Size = new System.Drawing.Size(38, 20);
             this.label2.TabIndex = 118;
             this.label2.Text = "N\\A";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            //this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // lblID
             // 
@@ -357,7 +363,7 @@
             this.lblID.Size = new System.Drawing.Size(28, 20);
             this.lblID.TabIndex = 117;
             this.lblID.Text = "ID";
-            this.lblID.Click += new System.EventHandler(this.lblID_Click);
+            //this.lblID.Click += new System.EventHandler(this.lblID_Click);
             // 
             // btnSave
             // 
@@ -437,6 +443,63 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Employment Info";
             // 
+            // dtpLeaveDate
+            // 
+            this.dtpLeaveDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpLeaveDate.Location = new System.Drawing.Point(129, 168);
+            this.dtpLeaveDate.Name = "dtpLeaveDate";
+            this.dtpLeaveDate.Size = new System.Drawing.Size(171, 26);
+            this.dtpLeaveDate.TabIndex = 146;
+            this.dtpLeaveDate.Value = new System.DateTime(2023, 9, 6, 3, 18, 47, 0);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(14, 168);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(106, 20);
+            this.label20.TabIndex = 147;
+            this.label20.Text = "Leave Date:";
+            // 
+            // dtpHireDate
+            // 
+            this.dtpHireDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpHireDate.Location = new System.Drawing.Point(129, 120);
+            this.dtpHireDate.Name = "dtpHireDate";
+            this.dtpHireDate.Size = new System.Drawing.Size(171, 26);
+            this.dtpHireDate.TabIndex = 144;
+            this.dtpHireDate.Value = new System.DateTime(2023, 9, 6, 3, 18, 47, 0);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(14, 123);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(91, 20);
+            this.label19.TabIndex = 145;
+            this.label19.Text = "Hire Date:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(14, 78);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(109, 20);
+            this.label18.TabIndex = 143;
+            this.label18.Text = "Department:";
+            // 
+            // cbDepartmentsOptions
+            // 
+            this.cbDepartmentsOptions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbDepartmentsOptions.FormattingEnabled = true;
+            this.cbDepartmentsOptions.Location = new System.Drawing.Point(129, 73);
+            this.cbDepartmentsOptions.Name = "cbDepartmentsOptions";
+            this.cbDepartmentsOptions.Size = new System.Drawing.Size(171, 28);
+            this.cbDepartmentsOptions.TabIndex = 142;
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -467,63 +530,6 @@
             this.lblEmploymentID.Size = new System.Drawing.Size(33, 20);
             this.lblEmploymentID.TabIndex = 119;
             this.lblEmploymentID.Text = "ID:";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(14, 78);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(109, 20);
-            this.label18.TabIndex = 143;
-            this.label18.Text = "Department:";
-            // 
-            // cbDepartmentsOptions
-            // 
-            this.cbDepartmentsOptions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbDepartmentsOptions.FormattingEnabled = true;
-            this.cbDepartmentsOptions.Location = new System.Drawing.Point(129, 73);
-            this.cbDepartmentsOptions.Name = "cbDepartmentsOptions";
-            this.cbDepartmentsOptions.Size = new System.Drawing.Size(171, 28);
-            this.cbDepartmentsOptions.TabIndex = 142;
-            // 
-            // dtpHireDate
-            // 
-            this.dtpHireDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpHireDate.Location = new System.Drawing.Point(129, 120);
-            this.dtpHireDate.Name = "dtpHireDate";
-            this.dtpHireDate.Size = new System.Drawing.Size(171, 26);
-            this.dtpHireDate.TabIndex = 144;
-            this.dtpHireDate.Value = new System.DateTime(2023, 9, 6, 3, 18, 47, 0);
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(14, 123);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(91, 20);
-            this.label19.TabIndex = 145;
-            this.label19.Text = "Hire Date:";
-            // 
-            // dtpLeaveDate
-            // 
-            this.dtpLeaveDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpLeaveDate.Location = new System.Drawing.Point(129, 168);
-            this.dtpLeaveDate.Name = "dtpLeaveDate";
-            this.dtpLeaveDate.Size = new System.Drawing.Size(171, 26);
-            this.dtpLeaveDate.TabIndex = 146;
-            this.dtpLeaveDate.Value = new System.DateTime(2023, 9, 6, 3, 18, 47, 0);
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(14, 168);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(106, 20);
-            this.label20.TabIndex = 147;
-            this.label20.Text = "Leave Date:";
             // 
             // FrmAddUpdateEmployee
             // 
