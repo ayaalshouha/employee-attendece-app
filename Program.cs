@@ -20,9 +20,9 @@ namespace Employees_Attendence_System
             Application.EnableVisualStyles();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmStart());
+            //Application.Run(new FrmStart());
             //Application.Run(new FrmCheckInOut());
-              //Application.Run(new FrmAdminLogin());
+              Application.Run(new FrmAdminLogin());
             //Application.Run(new FrmLeaveRequest());
         }
     }

@@ -40,6 +40,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.showEmployeeCardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployeesList)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -48,6 +50,7 @@
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.MidnightBlue;
+            this.pnlHeader.Controls.Add(this.btnNew);
             this.pnlHeader.Controls.Add(this.btnClose);
             this.pnlHeader.Controls.Add(this.label1);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
@@ -68,6 +71,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(65, 74);
             this.btnClose.TabIndex = 15;
+            this.toolTip1.SetToolTip(this.btnClose, "Close");
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -170,6 +174,21 @@
             this.showEmployeeCardToolStripMenuItem.Size = new System.Drawing.Size(261, 32);
             this.showEmployeeCardToolStripMenuItem.Text = "Show Employee Card";
             // 
+            // btnNew
+            // 
+            this.btnNew.FlatAppearance.BorderSize = 0;
+            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnNew.Image = global::Employees_Attendence_System.Properties.Resources.add__2_;
+            this.btnNew.Location = new System.Drawing.Point(1107, 8);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(65, 74);
+            this.btnNew.TabIndex = 15;
+            this.toolTip1.SetToolTip(this.btnNew, "Add New Employee");
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
             // FrmEmployeesList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -210,5 +229,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem showEmployeeCardToolStripMenuItem;
+        private System.Windows.Forms.Button btnNew;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

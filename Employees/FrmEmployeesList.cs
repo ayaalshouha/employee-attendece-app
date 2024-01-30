@@ -154,5 +154,11 @@ namespace Employees_Attendence_System.Adminstration.MainScreen_Forms
                 form.ShowDialog(); 
             }
         }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            FrmAddUpdateEmployee form = new FrmAddUpdateEmployee();
+            form.ShowDialog();
+        }
     }
 }

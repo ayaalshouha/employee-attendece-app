@@ -391,7 +391,7 @@
             this.label15.Size = new System.Drawing.Size(94, 20);
             this.label15.TabIndex = 115;
             this.label15.Text = "PersonID: ";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
+            //this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // groupBox1
             // 

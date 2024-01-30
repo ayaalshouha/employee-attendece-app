@@ -33,6 +33,29 @@ namespace Employees_Attendence_System.Employees
             
         }
       
+        private void _AssignDataToPerson()
+        {
+            _Person.FirstName = txtFirstName.Text;
+            _Person.LastName = txtLastName.Text;
+            _Person.Email = txtEmail.Text;
+            _Person.SecondName = txtSecondName.Text;
+            _Person.ThirdName = txtThirdName.Text;
+            _Person.PhoneNumber = txtPhone.Text;
+            _Person.BirthDate = dtpBirthdate.Value;
+            _Person.Nationality = cbCountries.Text.Trim();
+            _Person.Address = txtAddress.Text;
+            _Person.Gender = rdFemale.Checked ? "Female" : "Male";
+        }
+
+        private void _AssignDataToEmployee()
+        {
+            _PerosnID = _Person.ID;
+            _Employee = new clsEmployee();
+            _Employee.PersonID = _PerosnID;
+            _Employee.EmployeeDepartmentID = cbDepartmentsOptions.SelectedIndex + 1;
+            _Employee.WorkedFrom = dtpHireDate.Value;
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (!this.ValidateChildren())
@@ -41,26 +64,11 @@ namespace Employees_Attendence_System.Employees
             if(_Mode == enMode.add)
             {
                 _Person = new clsPerson();
-
-                _Person.FirstName = txtFirstName.Text; 
-                _Person.LastName = txtLastName.Text;
-                _Person.Email = txtEmail.Text;
-                _Person.SecondName = txtSecondName.Text;
-                _Person.ThirdName = txtThirdName.Text;
-                _Person.PhoneNumber = txtPhone.Text;
-                _Person.BirthDate = dtpBirthdate.Value;
-                _Person.Nationality = cbCountries.Text.Trim();
-                _Person.Address = txtAddress.Text;
-                _Person.Gender = rdFemale.Checked ? "Female" : "Male";
+                _AssignDataToPerson();
 
                 if (_Person.Save())
                 {
-                    _PerosnID = _Person.ID; 
-                    _Employee = new clsEmployee();
-                    _Employee.PersonID = _PerosnID;
-                    _Employee.EmployeeDepartmentID = cbDepartmentsOptions.SelectedIndex + 1;
-                    _Employee.WorkedFrom = dtpHireDate.Value;
-
+                    _AssignDataToEmployee();
                     if (_Employee.Save())
                     {
                         _EmployeeID = _Employee.ID;
