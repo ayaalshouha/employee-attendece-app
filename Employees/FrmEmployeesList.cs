@@ -92,9 +92,17 @@ namespace Employees_Attendence_System.Adminstration.MainScreen_Forms
 
 
             if (OriginalList.Columns[selectedColumnName].DataType == typeof(Int32))
-                dgvEmployeesList.DataSource = OriginalList.DefaultView.RowFilter = $"{selectedColumnName}='{filter}'"; 
+            {
+                DataView View = OriginalList.DefaultView;
+                View.RowFilter = $"{selectedColumnName}='{filter}'";
+                dgvEmployeesList.DataSource = View;
+            }
             else
-                dgvEmployeesList.DataSource = OriginalList.DefaultView.RowFilter = $"{selectedColumnName} LIKE '%{filter}%'";
+            {
+                DataView View = OriginalList.DefaultView;
+                View.RowFilter = $"{selectedColumnName} LIKE '%{filter}%'";
+                dgvEmployeesList.DataSource = View;
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -120,21 +128,21 @@ namespace Employees_Attendence_System.Adminstration.MainScreen_Forms
         private void dgvEmployeesList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int EmployeeID = (int)dgvEmployeesList.CurrentRow.Cells[0].Value;
-
             int index = e.ColumnIndex;
             int EditIndex = dgvEmployeesList.Columns["EditButtonColumn"].Index;
             int DeleteIndex = dgvEmployeesList.Columns["DeleteButtonColumn"].Index;
             int PreviewIndex = dgvEmployeesList.Columns["PreviewButtonColumn"].Index;
 
-            if (e.RowIndex >= 0 && e.ColumnIndex == EditIndex)
+            if (e.RowIndex >= 0 && index == EditIndex)
             {
                //Add/Edit form 
                FrmAddUpdateEmployee form = new FrmAddUpdateEmployee(EmployeeID);
                 form.ShowDialog();
             }
 
-            if (e.RowIndex >= 0 && e.ColumnIndex == DeleteIndex)
+            if (e.RowIndex >= 0 && index == DeleteIndex)
             {
+                //deletion code
                 if(MessageBox.Show($"are you sure you want to delete employee with EMP_CODE {EmployeeID} ??", "Message Box",
                     MessageBoxButtons.YesNo , MessageBoxIcon.Question) == DialogResult.Yes)
                 {
@@ -147,9 +155,9 @@ namespace Employees_Attendence_System.Adminstration.MainScreen_Forms
                 }
             }
 
-            if(e.RowIndex >= 0 && e.ColumnIndex == PreviewIndex)
+            if(e.RowIndex >= 0 && index == PreviewIndex)
             {
-                //preview code 
+                //preview form 
                 FrmFindEmployee form = new FrmFindEmployee(EmployeeID);
                 form.ShowDialog(); 
             }
