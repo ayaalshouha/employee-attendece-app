@@ -28,9 +28,23 @@ namespace Employees_Attendence_System.Employees
             _Mode = _EmployeeID == -1 ? enMode.add : enMode.update;
         }
         
-        private void _AssignInformation(clsEmployee Employee)
+        private void _AssignInformation()
         {
-            
+            //update employee cuurently loaded
+            //can't edit hiring date that previously assigned 
+
+            _Employee.PersonInfo.FirstName = txtFirstName.Text.Trim();
+            _Employee.PersonInfo.SecondName = txtSecondName.Text.Trim();
+            _Employee.PersonInfo.ThirdName = txtThirdName.Text.Trim();
+            _Employee.PersonInfo.LastName = txtLastName.Text.Trim();
+
+            _Employee.PersonInfo.Email = txtEmail.Text.Trim();
+            _Employee.PersonInfo.Gender = rdFemale.Checked ? "Female" : "Male";
+            _Employee.PersonInfo.BirthDate = dtpBirthdate.Value; 
+            _Employee.PersonInfo.Address = txtAddress.Text.Trim();
+            _Employee.EmployeeDepartmentID = cbDepartmentsOptions.SelectedIndex + 1;
+            _Employee.PersonInfo.Nationality = cbCountries.Text.Trim();
+
         }
       
         private void _AssignDataToPerson()
@@ -86,6 +100,10 @@ namespace Employees_Attendence_System.Employees
                             return; 
                         }
                     }
+                }
+                else
+                {
+                    _AssignInformation();
                 }
                 
                 MessageBox.Show("Something went wrong during saving information :-( , Try again later!",
@@ -197,6 +215,8 @@ namespace Employees_Attendence_System.Employees
                 lblHeader.Text = "Update Employee";
                 _Employee = clsEmployee.Find(_EmployeeID);
                 LoadEmployeeInfo(_Employee); 
+                dtpHireDate.Enabled = false;
+                
             }
         }
 
