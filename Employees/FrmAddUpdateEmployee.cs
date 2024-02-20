@@ -155,13 +155,34 @@ namespace Employees_Attendence_System.Employees
                 dtpHireDate.Text = employee.WorkedFrom.ToString();
 
                 if(employee.WorkedTo == null)
-                    dtpLeaveDate.Enabled = false;
+                    dtpLeaveDate.Enabled = true;
                 else
+                {
                     dtpLeaveDate.Text = employee.WorkedTo.ToString();
+                    DisableAll();
+                }
+                    
             }
             else
                 MessageBox.Show("Employee NOT Found", "Message Box", MessageBoxButtons.OK, 
                     MessageBoxIcon.Error); 
+        }
+        private void DisableAll()
+        {
+            btnSave.Enabled = false;
+            dtpLeaveDate.Enabled = false;
+            cbDepartmentsOptions.Enabled = false;
+            txtAddress.Enabled = false;
+            txtFirstName.Enabled = false;
+            txtLastName.Enabled = false;
+            txtSecondName.Enabled = false;
+            txtEmail.Enabled = false;
+            dtpBirthdate.Enabled = false;
+            rdFemale.Enabled = false;
+            rdMale.Enabled = false;
+            txtThirdName.Enabled = false;
+            cbCountries.Enabled = false;
+            txtPhone.Enabled = false;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -216,7 +237,7 @@ namespace Employees_Attendence_System.Employees
                 _Employee = clsEmployee.Find(_EmployeeID);
                 LoadEmployeeInfo(_Employee); 
                 dtpHireDate.Enabled = false;
-                
+               
             }
         }
 
@@ -242,6 +263,14 @@ namespace Employees_Attendence_System.Employees
             }
             else
                 errorProvider1.SetError(Temp, null);
+        }
+
+        private void dtpLeaveDate_ValueChanged(object sender, EventArgs e)
+        {
+            if(_Mode == enMode.update)
+            {
+                _Employee.WorkedTo = dtpLeaveDate.Value;
+            }
         }
     }
 }

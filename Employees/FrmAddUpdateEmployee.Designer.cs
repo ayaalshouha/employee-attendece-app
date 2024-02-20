@@ -425,6 +425,7 @@
             this.dtpLeaveDate.Size = new System.Drawing.Size(171, 26);
             this.dtpLeaveDate.TabIndex = 146;
             this.dtpLeaveDate.Value = new System.DateTime(2023, 9, 6, 3, 18, 47, 0);
+            this.dtpLeaveDate.ValueChanged += new System.EventHandler(this.dtpLeaveDate_ValueChanged);
             // 
             // label20
             // 
