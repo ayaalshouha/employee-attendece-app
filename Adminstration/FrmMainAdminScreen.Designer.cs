@@ -34,37 +34,37 @@
             this.lblWelcoming = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.filesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.employeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
-            this.currentUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripSeparator();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnlMainScreen = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.btnCompany = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.filesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.employeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employeeDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employeeOvertimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employeesListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.attendenceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.attendenceListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.leaveManagmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.approvedLeavesListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
+            this.currentUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripSeparator();
             this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employeesListToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.attendencesReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.overtimeReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnlMainScreen = new System.Windows.Forms.Panel();
             this.pnlHeader.SuspendLayout();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -140,107 +140,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(110, 624);
             this.panel1.TabIndex = 8;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.filesToolStripMenuItem,
-            this.employeesToolStripMenuItem,
-            this.currentUserToolStripMenuItem,
-            this.helpToolStripMenuItem,
-            this.helpToolStripMenuItem1});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1004, 33);
-            this.menuStrip1.TabIndex = 9;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // filesToolStripMenuItem
-            // 
-            this.filesToolStripMenuItem.Name = "filesToolStripMenuItem";
-            this.filesToolStripMenuItem.Size = new System.Drawing.Size(62, 29);
-            this.filesToolStripMenuItem.Text = "Files";
-            // 
-            // employeesToolStripMenuItem
-            // 
-            this.employeesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.employeeDetailsToolStripMenuItem,
-            this.employeeOvertimeToolStripMenuItem,
-            this.employeesListToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.attendenceToolStripMenuItem,
-            this.attendenceListToolStripMenuItem,
-            this.toolStripMenuItem2,
-            this.leaveManagmentToolStripMenuItem,
-            this.approvedLeavesListToolStripMenuItem,
-            this.toolStripMenuItem3});
-            this.employeesToolStripMenuItem.Name = "employeesToolStripMenuItem";
-            this.employeesToolStripMenuItem.Size = new System.Drawing.Size(114, 29);
-            this.employeesToolStripMenuItem.Text = "Employees";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(341, 6);
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(341, 6);
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(341, 6);
-            // 
-            // currentUserToolStripMenuItem
-            // 
-            this.currentUserToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.userInformationToolStripMenuItem,
-            this.changePasswordToolStripMenuItem,
-            this.toolStripMenuItem5,
-            this.signOutToolStripMenuItem});
-            this.currentUserToolStripMenuItem.Name = "currentUserToolStripMenuItem";
-            this.currentUserToolStripMenuItem.Size = new System.Drawing.Size(126, 29);
-            this.currentUserToolStripMenuItem.Text = "Current User";
-            // 
-            // toolStripMenuItem5
-            // 
-            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(267, 6);
-            // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.employeesListToolStripMenuItem1,
-            this.toolStripMenuItem4,
-            this.toolStripSeparator1,
-            this.attendencesReportToolStripMenuItem,
-            this.overtimeReportToolStripMenuItem});
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(89, 29);
-            this.helpToolStripMenuItem.Text = "Reports";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(345, 6);
-            // 
-            // helpToolStripMenuItem1
-            // 
-            this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
-            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(65, 29);
-            this.helpToolStripMenuItem1.Text = "Help";
-            // 
-            // pnlMainScreen
-            // 
-            this.pnlMainScreen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMainScreen.Location = new System.Drawing.Point(110, 118);
-            this.pnlMainScreen.Name = "pnlMainScreen";
-            this.pnlMainScreen.Size = new System.Drawing.Size(894, 624);
-            this.pnlMainScreen.TabIndex = 10;
             // 
             // button2
             // 
@@ -321,6 +220,45 @@
             this.btnNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnNew.UseVisualStyleBackColor = true;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.filesToolStripMenuItem,
+            this.employeesToolStripMenuItem,
+            this.currentUserToolStripMenuItem,
+            this.helpToolStripMenuItem,
+            this.helpToolStripMenuItem1});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1004, 33);
+            this.menuStrip1.TabIndex = 9;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // filesToolStripMenuItem
+            // 
+            this.filesToolStripMenuItem.Name = "filesToolStripMenuItem";
+            this.filesToolStripMenuItem.Size = new System.Drawing.Size(62, 29);
+            this.filesToolStripMenuItem.Text = "Files";
+            // 
+            // employeesToolStripMenuItem
+            // 
+            this.employeesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.employeeDetailsToolStripMenuItem,
+            this.employeeOvertimeToolStripMenuItem,
+            this.employeesListToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.attendenceToolStripMenuItem,
+            this.attendenceListToolStripMenuItem,
+            this.toolStripMenuItem2,
+            this.leaveManagmentToolStripMenuItem,
+            this.approvedLeavesListToolStripMenuItem,
+            this.toolStripMenuItem3});
+            this.employeesToolStripMenuItem.Name = "employeesToolStripMenuItem";
+            this.employeesToolStripMenuItem.Size = new System.Drawing.Size(114, 29);
+            this.employeesToolStripMenuItem.Text = "Employees";
+            // 
             // employeeDetailsToolStripMenuItem
             // 
             this.employeeDetailsToolStripMenuItem.Image = global::Employees_Attendence_System.Properties.Resources.personal_photo;
@@ -335,6 +273,7 @@
             this.employeeOvertimeToolStripMenuItem.Name = "employeeOvertimeToolStripMenuItem";
             this.employeeOvertimeToolStripMenuItem.Size = new System.Drawing.Size(344, 34);
             this.employeeOvertimeToolStripMenuItem.Text = "Employee Overtime";
+            this.employeeOvertimeToolStripMenuItem.Click += new System.EventHandler(this.employeeOvertimeToolStripMenuItem_Click);
             // 
             // employeesListToolStripMenuItem
             // 
@@ -344,12 +283,18 @@
             this.employeesListToolStripMenuItem.Text = "Employees List";
             this.employeesListToolStripMenuItem.Click += new System.EventHandler(this.employeesListToolStripMenuItem_Click);
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(341, 6);
+            // 
             // attendenceToolStripMenuItem
             // 
             this.attendenceToolStripMenuItem.Image = global::Employees_Attendence_System.Properties.Resources.project_acceptance;
             this.attendenceToolStripMenuItem.Name = "attendenceToolStripMenuItem";
             this.attendenceToolStripMenuItem.Size = new System.Drawing.Size(344, 34);
             this.attendenceToolStripMenuItem.Text = "Attendence";
+            this.attendenceToolStripMenuItem.Click += new System.EventHandler(this.attendenceToolStripMenuItem_Click);
             // 
             // attendenceListToolStripMenuItem
             // 
@@ -357,6 +302,12 @@
             this.attendenceListToolStripMenuItem.Name = "attendenceListToolStripMenuItem";
             this.attendenceListToolStripMenuItem.Size = new System.Drawing.Size(344, 34);
             this.attendenceListToolStripMenuItem.Text = "Attendences List";
+            this.attendenceListToolStripMenuItem.Click += new System.EventHandler(this.attendenceListToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(341, 6);
             // 
             // leaveManagmentToolStripMenuItem
             // 
@@ -372,11 +323,27 @@
             this.approvedLeavesListToolStripMenuItem.Size = new System.Drawing.Size(344, 34);
             this.approvedLeavesListToolStripMenuItem.Text = "Approved Requests List";
             // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(341, 6);
+            // 
+            // currentUserToolStripMenuItem
+            // 
+            this.currentUserToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.userInformationToolStripMenuItem,
+            this.changePasswordToolStripMenuItem,
+            this.toolStripMenuItem5,
+            this.signOutToolStripMenuItem});
+            this.currentUserToolStripMenuItem.Name = "currentUserToolStripMenuItem";
+            this.currentUserToolStripMenuItem.Size = new System.Drawing.Size(126, 29);
+            this.currentUserToolStripMenuItem.Text = "Current User";
+            // 
             // userInformationToolStripMenuItem
             // 
             this.userInformationToolStripMenuItem.Image = global::Employees_Attendence_System.Properties.Resources.user__3_1;
             this.userInformationToolStripMenuItem.Name = "userInformationToolStripMenuItem";
-            this.userInformationToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.userInformationToolStripMenuItem.Size = new System.Drawing.Size(256, 34);
             this.userInformationToolStripMenuItem.Text = "User information";
             this.userInformationToolStripMenuItem.Click += new System.EventHandler(this.userInformationToolStripMenuItem_Click);
             // 
@@ -384,17 +351,34 @@
             // 
             this.changePasswordToolStripMenuItem.Image = global::Employees_Attendence_System.Properties.Resources.password__2_;
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(256, 34);
             this.changePasswordToolStripMenuItem.Text = "Change password";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(253, 6);
             // 
             // signOutToolStripMenuItem
             // 
             this.signOutToolStripMenuItem.Image = global::Employees_Attendence_System.Properties.Resources.arrow_left__1_;
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(256, 34);
             this.signOutToolStripMenuItem.Text = "Sign out";
             this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.employeesListToolStripMenuItem1,
+            this.toolStripMenuItem4,
+            this.toolStripSeparator1,
+            this.attendencesReportToolStripMenuItem,
+            this.overtimeReportToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(89, 29);
+            this.helpToolStripMenuItem.Text = "Reports";
             // 
             // employeesListToolStripMenuItem1
             // 
@@ -412,6 +396,11 @@
             this.toolStripMenuItem4.Text = "Employee Leave Requests List";
             this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(345, 6);
+            // 
             // attendencesReportToolStripMenuItem
             // 
             this.attendencesReportToolStripMenuItem.Image = global::Employees_Attendence_System.Properties.Resources.clipboard;
@@ -425,6 +414,20 @@
             this.overtimeReportToolStripMenuItem.Name = "overtimeReportToolStripMenuItem";
             this.overtimeReportToolStripMenuItem.Size = new System.Drawing.Size(348, 34);
             this.overtimeReportToolStripMenuItem.Text = "Overtime Report";
+            // 
+            // helpToolStripMenuItem1
+            // 
+            this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
+            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(65, 29);
+            this.helpToolStripMenuItem1.Text = "Help";
+            // 
+            // pnlMainScreen
+            // 
+            this.pnlMainScreen.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMainScreen.Location = new System.Drawing.Point(110, 118);
+            this.pnlMainScreen.Name = "pnlMainScreen";
+            this.pnlMainScreen.Size = new System.Drawing.Size(894, 624);
+            this.pnlMainScreen.TabIndex = 10;
             // 
             // FrmMainAdminScreen
             // 

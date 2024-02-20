@@ -1,4 +1,5 @@
 ﻿using Employees_Attendence_System.Adminstration.MainScreen_Forms;
+using Employees_Attendence_System.Attendences;
 using Employees_Attendence_System.Employees;
 using Employees_Attendence_System.Global;
 using Employees_Attendence_System.Leave_Request;
@@ -37,16 +38,16 @@ namespace Employees_Attendence_System.Adminstration
 
         private void employeeDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //FrmFindEmployee Form = new FrmFindEmployee(); 
-            //Form.ShowDialog();
+            FrmFindEmployee Form = new FrmFindEmployee(); 
+            Form.ShowDialog();
 
-            pnlMainScreen.Controls.Clear();
-            lblSubHeader.Text = "Employee Details"; 
-            FrmFindEmployee Form = new FrmFindEmployee();
-            Form.TopLevel = false;
-            Form.Dock = DockStyle.Fill;
-            pnlMainScreen.Controls.Add(Form);
-            Form.Show();
+            //pnlMainScreen.Controls.Clear();
+            //lblSubHeader.Text = "Employee Details"; 
+            //FrmFindEmployee Form = new FrmFindEmployee();
+            //Form.TopLevel = false;
+            //Form.Dock = DockStyle.Fill;
+            //pnlMainScreen.Controls.Add(Form);
+            //Form.Show();
         }
 
         private void userInformationToolStripMenuItem_Click(object sender, EventArgs e)
@@ -85,6 +86,25 @@ namespace Employees_Attendence_System.Adminstration
             //employees list form 
            FrmEmployeesList form = new FrmEmployeesList();
             form.ShowDialog();
+        }
+
+        private void employeeOvertimeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void attendenceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCheckInOut frmCheckInOut = new FrmCheckInOut();
+            frmCheckInOut.ShowDialog();
+        }
+
+        private void attendenceListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //attendence list
+            //you should first selected the required date to check its attendences 
+
+            
         }
     }
 }

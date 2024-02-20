@@ -59,6 +59,18 @@
     <Compile Include="Adminstration\FrmMainAdminScreen.Designer.cs">
       <DependentUpon>FrmMainAdminScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Attendences\FrmAttendencesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendences\FrmAttendencesList.Designer.cs">
+      <DependentUpon>FrmAttendencesList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attendences\FrmFilterAttendencesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendences\FrmFilterAttendencesList.Designer.cs">
+      <DependentUpon>FrmFilterAttendencesList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employees\FrmAddUpdateEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +157,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Adminstration\FrmMainAdminScreen.resx">
       <DependentUpon>FrmMainAdminScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attendences\FrmAttendencesList.resx">
+      <DependentUpon>FrmAttendencesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attendences\FrmFilterAttendencesList.resx">
+      <DependentUpon>FrmFilterAttendencesList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employees\FrmAddUpdateEmployee.resx">
       <DependentUpon>FrmAddUpdateEmployee.cs</DependentUpon>

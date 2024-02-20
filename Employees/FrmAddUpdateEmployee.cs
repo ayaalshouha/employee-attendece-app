@@ -210,5 +210,18 @@ namespace Employees_Attendence_System.Employees
             else
                 errorProvider1.SetError(txtEmail, null);
         }
+
+        private void ValidateMaskedTextBox(object sender, CancelEventArgs e)
+        {
+            //set autovalidate property
+            MaskedTextBox Temp = (MaskedTextBox)sender;
+            if (string.IsNullOrEmpty(Temp.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(Temp, "This is required");
+            }
+            else
+                errorProvider1.SetError(Temp, null);
+        }
     }
 }

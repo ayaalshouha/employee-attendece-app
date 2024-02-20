@@ -320,5 +320,35 @@ namespace EAS_Data
             }
             return dt;
         }
+
+        public static DataTable List(DateTime date)
+        {
+            DataTable dt = new DataTable();
+            SqlConnection Connection = new SqlConnection(DataSettings.ConnectionString);
+            try
+            {
+                string Query = "SELECT * FROM Attendences Where Date = @date;";
+                SqlCommand command = new SqlCommand(Query, Connection);
+                command.Parameters.AddWithValue("@date", date); 
+
+                Connection.Open();
+                SqlDataReader Reader = command.ExecuteReader();
+                if (Reader.HasRows)
+                {
+                    dt.Load(Reader);
+                }
+                Reader.Close();
+            }
+            catch (Exception ex)
+            {
+                DataSettings.StoreUsingEventLogs(ex.Message.ToString());
+            }
+            finally
+            {
+                Connection.Close();
+            }
+            return dt;
+        }
+
     }
 }

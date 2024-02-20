@@ -107,6 +107,11 @@ namespace EAS_Buissness
             return AttendenceData.List();
         }
 
+        public static DataTable AttendencesList(DateTime date)
+        {
+            return AttendenceData.List(date);
+        }
+
         public static bool DoesCheckedInToday(int EmployeeID)
         {
             return AttendenceData.DoesCheckedInToday(EmployeeID);
