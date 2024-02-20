@@ -33,18 +33,18 @@ namespace Employees_Attendence_System.Employees
             //update employee cuurently loaded
             //can't edit hiring date that previously assigned 
 
-            _Employee.PersonInfo.FirstName = txtFirstName.Text.Trim();
-            _Employee.PersonInfo.SecondName = txtSecondName.Text.Trim();
-            _Employee.PersonInfo.ThirdName = txtThirdName.Text.Trim();
-            _Employee.PersonInfo.LastName = txtLastName.Text.Trim();
+            _Person = clsPerson.Find(_Employee.PersonID);
 
-            _Employee.PersonInfo.Email = txtEmail.Text.Trim();
-            _Employee.PersonInfo.Gender = rdFemale.Checked ? "Female" : "Male";
-            _Employee.PersonInfo.BirthDate = dtpBirthdate.Value; 
-            _Employee.PersonInfo.Address = txtAddress.Text.Trim();
+            _Person.FirstName = txtFirstName.Text.Trim();
+            _Person.LastName = txtLastName.Text.Trim();
+            _Person.Email = txtEmail.Text.Trim();
+            _Person.SecondName = txtSecondName.Text.Trim();
+            _Person.Gender = rdFemale.Checked ? "Female" : "Male";
+            _Person.BirthDate = dtpBirthdate.Value;
+            _Person.Address = txtAddress.Text.Trim();
+            _Person.Nationality = cbCountries.Text.Trim();
+            _Person.ThirdName = txtThirdName.Text.Trim();
             _Employee.EmployeeDepartmentID = cbDepartmentsOptions.SelectedIndex + 1;
-            _Employee.PersonInfo.Nationality = cbCountries.Text.Trim();
-
         }
       
         private void _AssignDataToPerson()
@@ -73,41 +73,58 @@ namespace Employees_Attendence_System.Employees
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (!this.ValidateChildren())
-                return; 
+                return;
 
-            if(_Mode == enMode.add)
+            if(MessageBox.Show("Are you sure you want to save information?",
+                        "Message Box", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                _Person = new clsPerson();
-                _AssignDataToPerson();
-
-                if (_Person.Save())
+                if (_Mode == enMode.add)
                 {
-                    _AssignDataToEmployee();
-                    if (_Employee.Save())
+                    _Person = new clsPerson();
+                    _AssignDataToPerson();
+
+                    if (_Person.Save())
                     {
-                        _EmployeeID = _Employee.ID;
-                        if(MessageBox.Show("Are you sure you want to save information?",
-                            "Message Box", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        _AssignDataToEmployee();
+
+                        if (_Employee.Save())
                         {
+                            _EmployeeID = _Employee.ID;
                             MessageBox.Show($"Employee with ID {_Employee.ID} saved successfully :-)",
                             "Message Box", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                             _Mode = enMode.update;
                             lblHeader.Text = "Update Employee";
                             lblID.Text = _PerosnID.ToString();
                             lblEmploymentID.Text = _EmployeeID.ToString();
-
-                            return; 
+                            return;
                         }
                     }
                 }
+
                 else
                 {
+                    //update mode
                     _AssignInformation();
+
+                    if (_Person.Save())
+                    {
+                        if (_Employee.Save())
+                        {
+                            MessageBox.Show($"Employee with ID {_Employee.ID} saved successfully :-)",
+                            "Message Box", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return;
+                        }
+                    }
+                    
                 }
                 
                 MessageBox.Show("Something went wrong during saving information :-( , Try again later!",
-                "Message Box", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    "Message Box", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                //process canceled
+                return;
             }
         }
 

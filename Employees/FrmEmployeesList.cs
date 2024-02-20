@@ -161,6 +161,9 @@ namespace Employees_Attendence_System.Adminstration.MainScreen_Forms
                 FrmFindEmployee form = new FrmFindEmployee(EmployeeID);
                 form.ShowDialog(); 
             }
+
+            _RefreshDatGridView();
+
         }
 
         private void btnNew_Click(object sender, EventArgs e)

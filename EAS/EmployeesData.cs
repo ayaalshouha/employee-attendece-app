@@ -116,7 +116,7 @@ namespace EAS_Data
                 Command.Parameters.AddWithValue("@EmployeeDepartmentID", employee.EmployeeDepartmentID);
 
 
-                if (employee.WorkedTo == DateTime.MinValue)
+                if (employee.WorkedTo == null)
                     Command.Parameters.AddWithValue("@LeaveDate", DBNull.Value);
                 else
                     Command.Parameters.AddWithValue("@LeaveDate", employee.WorkedTo);
