@@ -45,7 +45,29 @@ The Employee Attendance System is a Windows application designed to streamline a
   - Customize overtime rules for different departments.
 
 ## Screenshots
+**Main Menu** 
 
+![main menu](https://github.com/ayaalshouha/employees-attendence-application/assets/129595827/88aac5e9-8ad8-4ddb-9b0a-623ae8f1b4a8)
+
+**Login form**
+
+![login ](https://github.com/ayaalshouha/employees-attendence-application/assets/129595827/b416dcdb-0c08-441b-93f7-98ce7d351e31)
+
+**Users Main Menu**
+
+![users menu](https://github.com/ayaalshouha/employees-attendence-application/assets/129595827/e09e4cf8-86bd-4628-98d7-3205ad6a5e80)
+
+**Check in/out Form** 
+
+![checkin_out](https://github.com/ayaalshouha/employees-attendence-application/assets/129595827/ee717690-ad74-4dae-a84b-45b3c80750c0)
+
+**Add a leave request form** 
+
+![addLeaveRequest](https://github.com/ayaalshouha/employees-attendence-application/assets/129595827/38051b5d-5023-498e-b146-43b163c536c0)
+
+**Follow-up an exist leave request** 
+
+![followuoLeaveRequest](https://github.com/ayaalshouha/employees-attendence-application/assets/129595827/72574a7c-f285-40ab-a8d7-a02904dc3e85)
 
 ## Compilation 
 
